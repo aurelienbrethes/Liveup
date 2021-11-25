@@ -1,9 +1,11 @@
 import EventCard from "../EventCard";
 import './home.css';
+import Carousel from "../Carousel";
 
 const Home = () => {
     return (
         <div className="home">
+            <Carousel/>
 
             <EventCard />
             
@@ -13,8 +15,6 @@ const Home = () => {
 
 
         </div>
-
     )
-}
 
 export default Home;
