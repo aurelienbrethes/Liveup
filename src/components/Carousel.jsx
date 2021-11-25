@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import './carousel.css';
+import img1 from '../components/medias/img1.jpg';
+import img2 from '../components/medias/img2.jpg';
+import img3 from '../components/medias/img3.jpg';
+import img4 from '../components/medias/img4.jpg';
+import img5 from '../components/medias/img5.jpg';
 
 const Carousel = () => {
 
-  // Rotation du carousel
+// Rotation du carousel
 const [carousel_rotate, setCarousel_rotate] = useState('carousel');
-console.log(carousel_rotate);
 
 // Position des cartes
 const [carouselFace1, setCarouselFace1]= useState('carousel__face carousel__face1');
@@ -85,15 +89,29 @@ const positionCarousel5 = () => {
   setCarouselFace5('carousel__face carousel__face1');
 }
 
-
  return(
   <div className="container">
     <div className={carousel_rotate}>
-      <div  onMouseLeave={()=>mouseLeave()} onMouseEnter={()=>mouseEnter1()} className={carouselFace1}><span>1111</span></div>
-      <div  onMouseLeave={()=>mouseLeave()} onMouseEnter={()=>mouseEnter2()} className={carouselFace2}><span>2222</span></div>
-      <div  onMouseLeave={()=>mouseLeave()} onMouseEnter={()=>mouseEnter3()} className={carouselFace3}><span>3333</span></div>
-      <div  onMouseLeave={()=>mouseLeave()} onMouseEnter={()=>mouseEnter4()} className={carouselFace4}><span>4444</span></div>
-      <div  onMouseLeave={()=>mouseLeave()} onMouseEnter={()=>mouseEnter5()} className={carouselFace5}><span>5555</span></div>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter1()} className={carouselFace1}>
+        <img className="img_carousel" src={img1}/>
+        <h3>Concert</h3>
+      </div>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter2()} className={carouselFace2}>
+        <img className="img_carousel" src={img2}/>
+        <h3>Concert</h3>
+      </div>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter3()} className={carouselFace3}>
+        <img className="img_carousel" src={img3}/>
+        <h3>Concert</h3>
+      </div>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter4()} className={carouselFace4}>
+        <img className="img_carousel" src={img4}/>
+        <h3>Concert</h3>
+      </div>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter5()} className={carouselFace5}>
+        <img className="img_carousel" src={img5}/>
+        <h3>Concert</h3>
+      </div>
     </div>
 </div>
   )
