@@ -1,11 +1,11 @@
 .container {
   position: relative;
   width: 320px;
-  margin: 100px auto 0 auto;
+  height: 400px;
+  margin: 150px auto 0 auto;
   perspective: 1000px;
   color: #fefefe;
   text-align: center;
-  background: lightgray;
 }
 
 .carousel {
