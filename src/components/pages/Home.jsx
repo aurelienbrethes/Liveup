@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EventCard from "../EventCard";
 import './home.css';
 
@@ -14,6 +15,15 @@ const Home = () => {
 
         </div>
 
+=======
+import Carousel from "../Carousel";
+
+const Home = () => {
+    return (
+        <div>
+            <Carousel/>
+        </div>
+>>>>>>> 809579469f63a9e970f419d5801cc14a75ae9a5e
     )
 }
 
