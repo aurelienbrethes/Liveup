@@ -1,4 +1,10 @@
-.home {
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.video {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,10 +12,7 @@
 }
 
 .background_video {
-    width: 70%;
-    height: 100%;
     filter: grayscale(90%);
-    border-radius: 60px;
 }
 
 .searchCity {
@@ -22,7 +25,7 @@
     opacity: 0.8;
 }
 
-select {
+.home > select {
     width: 20%;
     height: 30px;
     text-align: center;
