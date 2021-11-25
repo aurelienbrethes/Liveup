@@ -25,7 +25,7 @@
     opacity: 0.8;
 }
 
-select {
+.home > select {
     width: 20%;
     height: 30px;
     text-align: center;
