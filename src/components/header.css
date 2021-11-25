@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #001e38;
+    align-items: center;
+    position: sticky;
+	top: 0px;
+    z-index: 2;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navMenu li {
+    list-style: none;
+    color: #c6cdd7;
+    margin-right: 30px;
+	margin-left: 30px;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+#logo img {
+    width: 6em;
+    margin-left: 15px;
+}
