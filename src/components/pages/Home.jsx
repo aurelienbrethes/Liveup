@@ -1,9 +1,12 @@
+import Carousel from "../Carousel";
 import '../pages/home.css'
 import home_video from '../../media/home_video.mp4'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
+import EventCard from "../EventCard";
 
 const Home = () => {
+  
     const [searchCity, setSearchCity] = useState("");
     const [allCities, setAllCities] = useState([]);
 
@@ -16,11 +19,10 @@ const Home = () => {
         })
         .catch((err) => console.log(err));
     },[searchCity]);
-
+  
     return (
-        <>
-            <div className="home">
-                <video className='background_video' autoPlay loop muted>
+        <div className="home">
+       <video className='background_video' autoPlay loop muted>
                     <source src={home_video} type='video/mp4' />
                 </video>
                 <input
@@ -39,9 +41,11 @@ const Home = () => {
                         )})}
                     </select>
                 }
+                <Carousel/>
+            <EventCard />            
+            <div className="mapDiv">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
-        </>
-    )
-}
+        </div>
 
 export default Home;
