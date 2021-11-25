@@ -1,0 +1,16 @@
+.profil {
+  background: #010c1e;
+  width: 80%;
+  height: 100%;
+}
+.profil h2 {
+  background: #001e38;
+  margin: 0;
+  padding: 0;
+  padding: 1em;
+}
+.informationsProfil {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
