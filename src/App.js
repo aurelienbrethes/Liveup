@@ -11,14 +11,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event" element={<Event />} />
         <Route path="/addEvent" element={<AddEvent />} />
         <Route path="/account" element={<Account />} />
       </Routes>
-
       </BrowserRouter>
     </div>
   );
