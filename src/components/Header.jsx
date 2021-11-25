@@ -10,7 +10,7 @@ const Header = () => {
             <div id="logo"><img src={logo}/></div>
             </Link>
             <ul className="navMenu">
-                <Link activeClassName="active" to="/event">
+                <Link to="/event">
                     <li>Les Evènements</li>
                 </Link>
                 <Link to="/addEvent">

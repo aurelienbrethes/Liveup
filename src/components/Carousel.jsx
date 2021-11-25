@@ -14,7 +14,7 @@ const [carousel_rotate, setCarousel_rotate] = useState('carousel');
       <div onMouseLeave={() => setCarousel_rotate('carousel')} onMouseEnter={()=> setCarousel_rotate('carousel_fixed')} class="carousel__face"><span>4444</span></div>
       <div onMouseLeave={() => setCarousel_rotate('carousel')} onMouseEnter={()=> setCarousel_rotate('carousel_fixed')} class="carousel__face"><span>5555</span></div>
     </div>
-</div>
+  </div>
   )
 }
 
