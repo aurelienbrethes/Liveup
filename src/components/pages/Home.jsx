@@ -1,6 +1,10 @@
+import Carousel from "../Carousel";
+
 const Home = () => {
     return (
-        <div>Coucou</div>
+        <div>
+            <Carousel/>
+        </div>
     )
 }
 
