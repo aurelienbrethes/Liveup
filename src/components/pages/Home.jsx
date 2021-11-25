@@ -22,17 +22,17 @@ const Home = () => {
   
     return (
         <div className="home">
-       <video className='background_video' autoPlay loop muted>
-                    <source src={home_video} type='video/mp4' />
-                </video>
-                <input
-                    className="searchCity"
-                    type="text"
-                    list="city"
-                    placeholder="Entrez votre code postal"
-                    value={searchCity}
-                    onChange={(e) => setSearchCity(e.target.value)}
-                />
+            <video className='background_video' autoPlay loop muted>
+                <source src={home_video} type='video/mp4' />
+            </video>
+            <input
+                className="searchCity"
+                type="text"
+                list="city"
+                placeholder="Entrez votre code postal"
+                value={searchCity}
+                onChange={(e) => setSearchCity(e.target.value)}
+            />
                 {searchCity.length < 5 ? "" : 
                     <select name="city" id="selectCity">
                         {allCities.map((city, index) => { 
@@ -41,10 +41,10 @@ const Home = () => {
                         )})}
                     </select>
                 }
-                <Carousel/>
+            <Carousel/>
             <EventCard />            
             <div className="mapDiv">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
         </div>
     )}
