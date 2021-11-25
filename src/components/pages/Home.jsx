@@ -35,12 +35,13 @@ const Home = () => {
             />
                 {searchCity.length < 5 ? "" : 
                     <select name="city" id="selectCity">
-                        {allCities.map((city, index) => {
+                        {allCities.map((city, index) => { 
                             return (
                         <option key={index} value={city.nom}>{city.nom}</option>
                         )})}
                     </select>
                 }
+            
             <Carousel/>
             <EventCard />            
             <div className="mapDiv">
