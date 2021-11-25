@@ -1,6 +1,35 @@
 .home {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_video {
+    width: 70%;
+    height: 100%;
+    filter: grayscale(90%);
+    border-radius: 60px;
+}
+
+.searchCity {
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.8;
+}
+
+select {
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 4.5rem;
 }
 
 .mapDiv {
@@ -14,3 +43,4 @@
     width: 80vw;
     height: 80vh;;
 }
+
