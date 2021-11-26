@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  background-color: #010c1e;
+  background-color: #29313b;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -18,14 +18,14 @@
 .container-sign-up input {
   height: 50px;
   text-align: center;
-  color: #010c1e;
+  color: #29313b;
 }
 
 .sign-up {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #010c1e;
+  background-color: #29313b;
 }
 
 .name {
@@ -35,6 +35,8 @@
 
 .name input {
   width: 40%;
+  background: #bb565883;
+  border: none;
 }
 
 .mail {
@@ -44,6 +46,8 @@
 .width-input input {
   width: 100%;
   box-sizing: border-box;
+  background: #bb565883;
+  border: none;
 }
 
 .space {
@@ -53,9 +57,9 @@
 .btn-sign-up button {
   height: 35px;
   width: 150px;
-  background-color: white;
+  background-color: #bb5657;
   color: #010c1e;
-  border: 1px solid #010c1e;
+  border: 1px solid #29313b;
   font-size: 1rem;
   transition: 0.5s;
   cursor: pointer;
@@ -63,13 +67,13 @@
 
 .btn-sign-up button:hover {
   transform: scale(1.05);
-  background-color: #010c1e;
-  border: 1px solid white;
+  background-color: #29313b;
+  border: 1px solid #bb5657;
   color: white;
 }
 
 .title-sign-up {
-  background-color: #4a6d88;
+  background-color: #bb5657;
   width: 100%;
   height: 100%;
   display: flex;
