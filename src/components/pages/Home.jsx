@@ -37,7 +37,7 @@ const Home = () => {
         <img src={logo} className={logo_liveup} alt="logo Live up" />
       </div>
       <div className={videoCard}>
-        <h1 className="titleHeroHeader">Trouvez votre événement idéal!</h1>
+        <h1 className="titleHeroHeader">Trouvez votre événement idéal !</h1>
         <video className="background_video" autoPlay loop muted>
           <source src={home_video} type="video/mp4" />
         </video>
@@ -49,7 +49,7 @@ const Home = () => {
           value={searchCity}
           onChange={(e) => setSearchCity(e.target.value)}
         />
-        {searchCity.length < 5 ? (
+        {searchCity.length < 5 || searchCity.length > 5 ? (
           ""
         ) : (
           <select name="city" id="selectCity">
