@@ -1,9 +1,11 @@
 import Carousel from "../Carousel";
-import '../pages/home.css';
-import home_video from '../medias/home_video.mp4';
-import { useEffect, useState } from 'react';
+import Profil from "../Profil";
+import '../pages/home.css'
+import home_video from '../medias/home_video.mp4'
+import { useEffect, useState } from 'react'
 import axios from 'axios';
-import logo from '../medias/Live_up_1.gif';
+import Login from "../Login";
+import logo from '../medias/Live_up_1.gif'
 
 const Home = () => {
   
@@ -65,6 +67,8 @@ const Home = () => {
             <div className="mapDiv">
                 <iframe title="locations" src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
+            <Login/>
+			<Profil />
             
         </div>
     )}
