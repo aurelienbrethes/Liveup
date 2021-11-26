@@ -1,10 +1,9 @@
 import Carousel from "../Carousel";
 import Profil from "../Profil";
 import '../pages/home.css'
-import home_video from '../../media/home_video.mp4'
+import home_video from '../medias/home_video.mp4'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-import EventCard from "../EventCard";
 
 const Home = () => {
   
@@ -23,17 +22,18 @@ const Home = () => {
   
     return (
         <div className="home">
-       <video className='background_video' autoPlay loop muted>
-                    <source src={home_video} type='video/mp4' />
-                </video>
-                <input
-                    className="searchCity"
-                    type="text"
-                    list="city"
-                    placeholder="Entrez votre code postal"
-                    value={searchCity}
-                    onChange={(e) => setSearchCity(e.target.value)}
-                />
+            <div className="videoCard">
+            <video className='background_video' autoPlay loop muted>
+                <source src={home_video} type='video/mp4' />
+            </video>
+            <input
+                className="searchCity"
+                type="text"
+                list="city"
+                placeholder="Entrez votre code postal"
+                value={searchCity}
+                onChange={(e) => setSearchCity(e.target.value)}
+            />
                 {searchCity.length < 5 ? "" : 
                     <select name="city" id="selectCity">
                         {allCities.map((city, index) => { 
@@ -42,12 +42,19 @@ const Home = () => {
                         )})}
                     </select>
                 }
-                <Carousel/>
-            <EventCard />            
-            <div className="mapDiv">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
+            <div className="h2_container">
+                <h2>Make yours nights great again</h2>
+            </div>
+                <Carousel/>                  
+            <div className="mapDiv">
+                <iframe title="locations" src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
+            </div>
+<<<<<<< HEAD
 			<Profil />
+=======
+            
+>>>>>>> e647a0f5038c1c44ad82e1268ba42fe6f4c81b93
         </div>
     )}
 

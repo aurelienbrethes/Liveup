@@ -5,6 +5,7 @@
     align-items: center;
     position: sticky;
 	top: 0px;
+    z-index: 2;
 }
 
 .navMenu {
@@ -21,7 +22,12 @@
 	font-weight: 500;
 }
 
+.navMenu li:hover {
+    color: #4a6d88;
+}
+
 #logo img {
     width: 6em;
     margin-left: 15px;
 }
+
