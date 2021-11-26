@@ -1,0 +1,68 @@
+.modalBackground {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+  
+  .modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 80%;
+    padding: 0.5rem;
+    background: #4a6d88;
+    outline: 100vh solid rgba(0, 0, 0, 0.7);
+  }
+
+  .modalContainer p {
+    font-size: 23px;
+  }
+
+  .modalHeader h3 {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+  }
+
+  .modalContainer button {
+    color: white;
+  }
+
+  .modalFullInfo {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-content: center;
+    height: max-content;
+  }
+
+  .modalFooter {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: -1;
+    justify-items: center;
+  }
+
+  .modalBtn {
+    padding: 0.5rem;
+    width: 10rem;
+    background-color: #001e38;
+    cursor: pointer;
+  }
+ 
+ .isHidden{
+   display: none;
+ }

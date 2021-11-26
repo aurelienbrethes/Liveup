@@ -1,0 +1,53 @@
+.profil {
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #29313b;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.titleProfil {
+  margin: 0 !important;
+  padding: 1em !important;
+  width: 100% !important;
+  background: #bb5657;
+}
+.informationsProfil {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 3em;
+  justify-content: space-around;
+}
+.informationsProfil p {
+  padding: 1em;
+  background: #bb5657;
+  border: 1px solid white;
+  transition: 0.3s ease-out;
+  letter-spacing: 3px;
+}
+.informationsProfil > * {
+  margin: 0.5em;
+}
+.btnProfil {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  text-decoration: underline;
+}
+.btnProfil:hover {
+  letter-spacing: 5px;
+}
+.contImageLogout {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.contImageLogout img {
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "fontTitle";
+  src: url("./fonts/BebasNeue-Regular.ttf");
+}
+html {
+}
+.btn {
+  padding: 1em;
+  background: #bb5657;
+  border: 1px solid #bb5657;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.btn:hover {
+  background: transparent;
+}
+.inpt {
+  padding: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #bb5657 !important;
+  outline: none;
+  color: white;
+}

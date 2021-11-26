@@ -1,0 +1,29 @@
+.eventCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+    height: 300px;
+    background-color: #001e38;
+    object-fit: cover;
+    overflow: hidden;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding-top: 0.8em;
+}
+
+.eventTitle {
+    color: #c6cdd7;
+    text-align: center;
+    font-size:1.1em;
+    padding: 0.8em;
+}
+
+.eventCard img {
+    width: 90%;
+    max-height: 80%;
+}
