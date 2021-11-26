@@ -1,4 +1,5 @@
 import Carousel from "../Carousel";
+import Profil from "../Profil";
 import '../pages/home.css'
 import home_video from '../medias/home_video.mp4'
 import { useEffect, useState } from 'react'
@@ -49,7 +50,11 @@ const Home = () => {
             <div className="mapDiv">
                 <iframe title="locations" src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
+<<<<<<< HEAD
+			<Profil />
+=======
             
+>>>>>>> e647a0f5038c1c44ad82e1268ba42fe6f4c81b93
         </div>
     )}
 
