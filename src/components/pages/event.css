@@ -24,6 +24,10 @@
     justify-content: space-around;
 }
 
+.right p {
+    padding-top: 14px;
+}
+
 .eventList {
     display: flex;
     flex-wrap: wrap;

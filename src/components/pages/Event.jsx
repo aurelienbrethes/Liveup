@@ -235,14 +235,13 @@ const selectStyle = (element) => {
                                         <h3>Votre évènement !</h3>
                                     </div>
                                     <div className="modalFullInfo">
-                                        <p>Artiste : {info.artist_name}</p>
-                                        <p>Style : {event_style}</p>
-                                        <p>Date : {info.date}</p>
-                                        <p>Code Postal : {info.postal_code}</p>
-                                        <p>Ville : {info.city}</p>
-                                        <p>Adresse : {info.location ? info.location : "Inconnue"}</p>
-                                        <p>Lieu : {info.name_place}</p>
-                                        <p>Heure : {info.time}</p>
+                                        <p>{info.artist_name}</p>
+                                        <p>{event_style}</p>
+                                        <p>{info.date}</p>
+                                        <p>{info.time}</p>
+                                        <p>{info.name_place}</p>
+                                        <p>{info.location ? info.location : "Inconnue"}</p>
+                                        <p>{info.postal_code}{info.city}</p>                       
                                     </div>
                                     <div className="modalFooter">
                                         <button
