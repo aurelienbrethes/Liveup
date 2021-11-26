@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Profil from "./Profil";
 import Login from "./Login";
 import UserContext from "../contexts/UserContext";
-import SignUp from "./SignUp";
+import SignUp from "./sign-up/SignUp";
 
 const Header = () => {
   const [showLogin, setShowLogin] = useState("");
@@ -45,7 +45,7 @@ const Header = () => {
 
         {showLogin === "login" && <Login setShowLogin={setShowLogin} />}
         {showLogin === "profil" && <Profil />}
-        {showLogin === "signup" && <SignUp setShowLogin={setShowLogin} />}
+        {showLogin === "signup" && <SignUp />}
       </ul>
     </div>
   );
