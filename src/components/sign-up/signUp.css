@@ -90,3 +90,9 @@
 .borderRed p {
   color: red;
 }
+
+@media screen and (max-width: 870px) {
+  .container-sign-up {
+    width: 70%;
+  }
+}
