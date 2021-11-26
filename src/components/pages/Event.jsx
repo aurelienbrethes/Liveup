@@ -30,12 +30,17 @@ const Event = () => {
         <div className="event">
 
             <div className="eventFilters">
+                <div className="selectFilter">
+                <p>Artiste :</p>
                 <select name="artistSelect" id="artistFilter">
                     {event.map((info, index) => {
                         return(
                         <option key={index} value={info.artist_name}>{info.artist_name}</option>
                     )})}
                 </select>
+                </div>
+                <div className="selectFilter">
+                <p>Ville :</p>
                 <select name="citySelect" id="cityFilter">
                     {event.map((info) => { return ( info.city)})
                     .reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], [])
@@ -44,6 +49,9 @@ const Event = () => {
                         <option key={index} value={info}>{info}</option>
                     )})}
                 </select>
+                </div>
+                <div className="selectFilter">
+                <p>Style :</p>
                 <select name="styleSelect" id="styleFilter">
                     {style.map((info) => { return ( info.name_style)})
                     .reduce((unique, item) => unique.includes(item) ? unique : [...unique, item], [])
@@ -52,6 +60,7 @@ const Event = () => {
                         <option key={index} value={info}>{info}</option>
                     )})}
                 </select>
+                </div>
             </div>
 
             <div className="eventList">
