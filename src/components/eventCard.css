@@ -7,15 +7,17 @@
     object-fit: cover;
     overflow: hidden;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .eventTitle {
     color: #c6cdd7;
     text-align: center;
-    font-size:1.2em;
-    padding: 0.7em;
+    font-size:1.1em;
+    padding: 0.8em;
 }
 
 .eventCard img {
