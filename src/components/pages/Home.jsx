@@ -1,13 +1,26 @@
 import Carousel from "../Carousel";
-import '../pages/home.css'
-import home_video from '../medias/home_video.mp4'
-import { useEffect, useState } from 'react'
+import '../pages/home.css';
+import home_video from '../medias/home_video.mp4';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+import logo from '../medias/Live_up_1.gif';
 
 const Home = () => {
   
     const [searchCity, setSearchCity] = useState("");
     const [allCities, setAllCities] = useState([]);
+    const [videoCard, setVideoCard] = useState('displayNone');
+    const[logo_liveup, setLogo_liveup] = useState('logo_liveup');
+
+    useEffect(()=>{
+        const timer = setTimeout(() => {
+            setVideoCard('videoCard');
+            setLogo_liveup('displayNone');
+        }, 5000); 
+        return () => {
+            clearInterval(timer);
+        }
+    },[]);
 
     useEffect(() => { 
         axios
@@ -21,7 +34,10 @@ const Home = () => {
   
     return (
         <div className="home">
-            <div className="videoCard">
+            <div className="logo_container">
+                <img src={logo} className={logo_liveup} alt="logo Live up" />
+            </div>           
+            <div className={videoCard}>
             <video className='background_video' autoPlay loop muted>
                 <source src={home_video} type='video/mp4' />
             </video>
