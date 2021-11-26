@@ -250,16 +250,18 @@ const selectStyle = (element) => {
                 </select>
                 </div>
                 <button type="button" onClick={() => setShowCards(!showCards)}>
-                     {showCards ? 'Recherche filtrée' : "Tous les events"}
+                     {showCards ? 'Afficher tout' : "Chercher"}
                 </button>
             </div>
             <div className="eventList">
                 {showCards ?
-                event.filter((el) => 
-                    el.artist_name === artistFilter ||
-                    el.city === cityFilter ||
-                    el.date === dateFilter ||
-                    el.style === styleFilter
+                event
+                .filter((el) =>
+                    (el.artist_name === artistFilter) ||
+                    (el.artist_name === artistFilter && el.city === cityFilter) ||
+                    (el.artist_name === artistFilter && el.date === dateFilter) ||
+                    (el.style === styleFilter) ||
+                    (el.city === cityFilter)
                 ).map((info) => {
                     return (
                 <div key={info.id}
