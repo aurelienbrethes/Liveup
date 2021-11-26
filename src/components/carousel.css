@@ -37,35 +37,11 @@
   flex-direction: column;
   cursor: pointer;
   font-size: 18px;
-  font-family: "Vibur", sans-serif;
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #3dd8fc,
-      0 0 21px #3dd8fc,
-      0 0 42px #3dd8fc;
-}
-
-.neonText {
-  font-size: 18px;
-  font-family: "Vibur", sans-serif;
-  color: #fff;
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
 }
 
 .carousel__face:hover {
-  transition: transform .2s;
+  transition: transform .4s;
   zoom: 1.1;
-  border-width: 3px;
-  border-style:inset;
-  border-color: #3dd8fc;
 }
 
 .carousel__face h3{
