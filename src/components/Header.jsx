@@ -24,29 +24,29 @@ const Header = ({ wheel, setWheel }) => {
         </div>
       </Link>
       <div className="containerNavMenu">
-        <ul className="navMenu">
-          <Link activeclassname="active" to="/event">
-            <li>Les Evènements</li>
-          </Link>
-          <Link activeclassname="active" to="/addEvent">
-            <li>Ajouter un évènement</li>
-          </Link>
-          <li>
-            <button
-              onClick={() => {
-                setShowLogin(userLogin.mail !== undefined ? "profil" : "login");
-              }}
-              className="btnAccount"
-            >
-              {userLogin.mail !== undefined ? "Mon Profil" : "Mon compte"}
-            </button>
-          </li>
+      <ul className="navMenu">
+        <Link activeclassname="active" to="/event">
+          <li>Les Evènements</li>
+        </Link>
+        <Link activeclassname="active" to="/addEvent">
+          <li>Ajouter un évènement</li>
+        </Link>
+        <li>
+          <button
+            onClick={() => {
+              setShowLogin(userLogin.mail !== undefined ? "profil" : "login");
+            }}
+            className="btnAccount"
+          >
+            {userLogin.mail !== undefined ? "Mon Profil" : "Mon compte"}
+          </button>
+        </li>
 
-          {showLogin === "login" && <Login setShowLogin={setShowLogin} />}
-          {showLogin === "profil" && <Profil />}
-          {showLogin === "signup" && <SignUp setShowLogin={setShowLogin} />}
-        </ul>
-      </div>
+        {showLogin === "login" && <Login setShowLogin={setShowLogin} />}
+        {showLogin === "profil" && <Profil setShowLogin={setShowLogin} />}
+        {showLogin === "signup" && <SignUp setShowLogin={setShowLogin} />}
+      </ul>
+    </div>
     </div>
   );
 };
