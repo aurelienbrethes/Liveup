@@ -1,15 +1,35 @@
 .home {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    background-color: #4a6d88;
+}
+
+.home h2 {
+    font-size: 25px;
+    font-style: italic;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    width: 80%;
+    background-color: #001e38;
+    margin-top: 50px;
+}
+
+.h2_container{
+    display: flex;
+    justify-content: center;
+}
+
+.videoCard {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .background_video {
-    width: 70%;
-    height: 100%;
-    filter: grayscale(90%);
-    border-radius: 60px;
+    width: 100%;
 }
 
 .searchCity {
@@ -22,7 +42,7 @@
     opacity: 0.8;
 }
 
-select {
+#selectCity {
     width: 20%;
     height: 30px;
     text-align: center;
@@ -30,13 +50,6 @@ select {
     z-index: 1;
     position: absolute;
     margin-top: 4.5rem;
-}
-
-.mapDiv {
-    position: relative;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .mapDiv iframe {
