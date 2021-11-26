@@ -43,7 +43,7 @@ const Header = () => {
         </li>
 
         {showLogin === "login" && <Login setShowLogin={setShowLogin} />}
-        {showLogin === "profil" && <Profil />}
+        {showLogin === "profil" && <Profil setShowLogin={setShowLogin} />}
         {showLogin === "signup" && <SignUp setShowLogin={setShowLogin} />}
       </ul>
     </div>

@@ -8,9 +8,10 @@ const Login = ({ setShowLogin }) => {
   const [userConnected, setUserConnected] = useState([]);
   const [dataPassword, setDataPassword] = useState("");
   const [searchUser, setSearchUser] = useState(false);
-  const [error, setError] = useState('');
-
+  const [passwordError, setPasswordError]= useState(false);
+  const [mailNotFound, SetMailNotFound] = useState(false);
   const { setUserLogin } = useContext(UserContext);
+
   useEffect(() => {
     if (searchUser) {
       axios
@@ -21,11 +22,12 @@ const Login = ({ setShowLogin }) => {
           setSearchUser(false);
         });
       if (userConnected === undefined) {
-          setError(" user not found")
+          SetMailNotFound(true);
       } 
-      if (dataLogin === userConnected.mail && dataPassword != userConnected.password){
-          setError("wrong PassWord")
-      }else {
+      else if (userConnected.password !== dataPassword ){
+                setPasswordError(true);
+      }
+      else {
         if (
           dataPassword === userConnected.password &&
           dataLogin === userConnected.mail
@@ -42,13 +44,10 @@ const Login = ({ setShowLogin }) => {
             .catch((err) => console.log(err));
         } else {
             if ( dataPassword === "" && dataLogin === userConnected.mail) {
-                setError( "You forget your Password !! ")
+               SetMailNotFound(true);
             }
             if ( dataLogin === "" && dataPassword === userConnected.password ) {
-                setError(" You forget your Email ")
-            }
-            if ( dataLogin === "" && dataPassword === ""){
-               setError("You missed yours mail and password")
+                SetMailNotFound(true);
             }
         }
       }
@@ -73,19 +72,22 @@ const Login = ({ setShowLogin }) => {
       <form onSubmit={handleLogin} className="loginForm">
         <label>
           <input
-            className="inpt"
+            className={`inpt ${mailNotFound && 'redBorder'}`}
             onChange={(e) => setDataLogin(e.target.value)}
             type="email"
             placeholder="Entrez votre mail..."
-          ></input>
+          ></input> 
+          {mailNotFound && <p>Email incorrect</p>}
         </label>
         <label>
           <input
-            className="inpt"
+            className={`inpt ${passwordError && 'redBorder'}`}
             onChange={(e) => setDataPassword(e.target.value)}
             type="password"
             placeholder="Entrez votre mot de passe..."
           ></input>
+          {passwordError && <p>Mot de passe incorrect !!</p>}
+
         </label>
         <button className="btn" type="submit">
           {" "}
