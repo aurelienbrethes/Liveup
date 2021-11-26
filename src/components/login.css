@@ -1,0 +1,30 @@
+.login {
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #010c1e;
+  z-index: 5;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.loginForm label {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.newAccount {
+  border: none;
+  background: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  padding: 1em;
+}
+.newAccount:hover {
+  letter-spacing: 5px;
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+html {
+  background: #4a6d88;
+}
+.btn {
+  padding: 1em;
+  background: #001e38;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.btn:hover {
+  background: white;
+  color: #4a6d88;
+}
+.inpt {
+  padding: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white !important;
+  outline: none;
+}
