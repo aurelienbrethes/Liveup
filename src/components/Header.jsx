@@ -9,7 +9,6 @@ import UserContext from "../contexts/UserContext";
 const Header = () => {
   const [showLogin, setShowLogin] = useState("");
   const { userLogin } = useContext(UserContext);
-  console.log(showLogin);
 
   return (
     <div className="header">
@@ -18,17 +17,17 @@ const Header = () => {
         showLogin === "profil") && (
         <div onClick={() => setShowLogin("")} className="screenBlack"></div>
       )}
-      <Link activeClassName="active" to="/">
+      <Link activeclassname="active" to="/">
         <div id="logo">
           <img src={logo} />
         </div>
       </Link>
 
       <ul className="navMenu">
-        <Link activeClassName="active" to="/event">
+        <Link activeclassname="active" to="/event">
           <li>Les Evènements</li>
         </Link>
-        <Link activeClassName="active" to="/addEvent">
+        <Link activeclassname="active" to="/addEvent">
           <li>Ajouter un évènement</li>
         </Link>
         <li>
@@ -43,7 +42,7 @@ const Header = () => {
         </li>
 
         {showLogin === "login" && <Login setShowLogin={setShowLogin} />}
-        {showLogin === "profil" && <Profil />}
+        {showLogin === "profil" && <Profil setShowLogin={setShowLogin} />}
       </ul>
     </div>
   );
