@@ -8,6 +8,7 @@ const Login = ({ setShowLogin }) => {
   const [userConnected, setUserConnected] = useState([]);
   const [dataPassword, setDataPassword] = useState("");
   const [searchUser, setSearchUser] = useState(false);
+  const [error, setError] = useState('');
 
   const { setUserLogin } = useContext(UserContext);
   useEffect(() => {
@@ -20,7 +21,11 @@ const Login = ({ setShowLogin }) => {
           setSearchUser(false);
         });
       if (userConnected === undefined) {
-      } else {
+          setError(" user not found")
+      } 
+      if (dataLogin === userConnected.mail && dataPassword != userConnected.password){
+          setError("wrong PassWord")
+      }else {
         if (
           dataPassword === userConnected.password &&
           dataLogin === userConnected.mail
@@ -35,6 +40,16 @@ const Login = ({ setShowLogin }) => {
               setShowLogin("");
             })
             .catch((err) => console.log(err));
+        } else {
+            if ( dataPassword === "" && dataLogin === userConnected.mail) {
+                setError( "You forget your Password !! ")
+            }
+            if ( dataLogin === "" && dataPassword === userConnected.password ) {
+                setError(" You forget your Email ")
+            }
+            if ( dataLogin === "" && dataPassword === ""){
+               setError("You missed yours mail and password")
+            }
         }
       }
     }
