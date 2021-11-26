@@ -12,35 +12,37 @@ const Carousel = () => {
 const [carousel_rotate, setCarousel_rotate] = useState('carousel');
 
 // Position des cartes
-const [carouselFace1, setCarouselFace1]= useState('carousel__face carousel__face1');
-const [carouselFace2, setCarouselFace2]= useState('carousel__face carousel__face2');
-const [carouselFace3, setCarouselFace3]= useState('carousel__face carousel__face3');
-const [carouselFace4, setCarouselFace4]= useState('carousel__face carousel__face4');
-const [carouselFace5, setCarouselFace5]= useState('carousel__face carousel__face5');
 
-const mouseEnter1 = () => {
+let carouselBase = 'carousel__face'; 
+const [carouselFace1, setCarouselFace1]= useState(`${carouselBase} carousel__face1`);
+const [carouselFace2, setCarouselFace2]= useState(`${carouselBase} carousel__face2`);
+const [carouselFace3, setCarouselFace3]= useState(`${carouselBase} carousel__face3`);
+const [carouselFace4, setCarouselFace4]= useState(`${carouselBase} carousel__face4`);
+const [carouselFace5, setCarouselFace5]= useState(`${carouselBase} carousel__face5`);
+
+const onClick1 = () => {
   setCarousel_rotate('carousel_fixed');
   positionCarousel1();
 };
 
-const mouseEnter2 = () => {
+const onClick2 = () => {
   setCarousel_rotate('carousel_fixed');
   positionCarousel2();
 };
 
 
-const mouseEnter3 = () => {
+const onClick3 = () => {
   setCarousel_rotate('carousel_fixed');
   positionCarousel3();
 };
 
-const mouseEnter4 = () => {
+const onClick4 = () => {
   setCarousel_rotate('carousel_fixed');
   positionCarousel4();
 };
 
 
-const mouseEnter5 = () => {
+const onClick5 = () => {
   setCarousel_rotate('carousel_fixed');
   positionCarousel5();
 };
@@ -93,23 +95,23 @@ const positionCarousel5 = () => {
   <div className="container">
     <h2>Evènements à venir</h2>
     <div className={carousel_rotate}>
-      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter1()} className={carouselFace1}>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>onClick1()} className={carouselFace1}>
         <img className="img_carousel" alt="concert1" src={img1}/>
         <h3>Concert</h3>
       </div>
-      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter2()} className={carouselFace2}>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>onClick2()} className={carouselFace2}>
         <img className="img_carousel" alt="concert2" src={img2}/>
         <h3>Concert</h3>
       </div>
-      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter3()} className={carouselFace3}>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>onClick3()} className={carouselFace3}>
         <img className="img_carousel" alt="concert3" src={img3}/>
         <h3>Concert</h3>
       </div>
-      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter4()} className={carouselFace4}>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>onClick4()} className={carouselFace4}>
         <img className="img_carousel" alt="concert4" src={img4}/>
         <h3>Concert</h3>
       </div>
-      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter5()} className={carouselFace5}>
+      <div  onMouseLeave={()=>mouseLeave()} onClick={()=>onClick5()} className={carouselFace5}>
         <img className="img_carousel" alt="concert5" src={img5}/>
         <h3>Concert</h3>
       </div>
