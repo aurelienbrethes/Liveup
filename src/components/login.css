@@ -7,12 +7,6 @@
   background: #010c1e;
   z-index: 5;
 }
-.login h2 {
-  margin: 0;
-  padding: 1em;
-  width: 100%;
-  background: #4a6d88;
-}
 .loginForm {
   display: flex;
   flex-direction: column;

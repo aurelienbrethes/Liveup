@@ -9,8 +9,7 @@ const Login = ({ setShowLogin }) => {
   const [dataPassword, setDataPassword] = useState("");
   const [searchUser, setSearchUser] = useState(false);
 
-  const { userLogin, setUserLogin } = useContext(UserContext);
-  console.log(userLogin);
+  const { setUserLogin } = useContext(UserContext);
   useEffect(() => {
     if (searchUser) {
       axios
@@ -36,14 +35,17 @@ const Login = ({ setShowLogin }) => {
               setShowLogin("");
             })
             .catch((err) => console.log(err));
-
-          axios
-            .get("https://apiliveup.herokuapp.com/login")
-            .then((res) => console.log(res));
         }
       }
     }
-  }, [dataLogin, searchUser, dataPassword, setUserLogin, setShowLogin]);
+  }, [
+    dataLogin,
+    searchUser,
+    dataPassword,
+    userConnected,
+    setUserLogin,
+    setShowLogin,
+  ]);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -52,7 +54,7 @@ const Login = ({ setShowLogin }) => {
 
   return (
     <div className="login">
-      <h2>Se Connecter</h2>
+      <h2 className="titleProfil">Se Connecter</h2>
       <form onSubmit={handleLogin} className="loginForm">
         <label>
           <input

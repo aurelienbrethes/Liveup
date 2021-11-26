@@ -76,8 +76,6 @@ const Home = () => {
           height="480"
         ></iframe>
       </div>
-      <Login />
-      <Profil />
     </div>
   );
 };

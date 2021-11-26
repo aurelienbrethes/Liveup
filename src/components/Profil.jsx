@@ -76,10 +76,9 @@ const Profil = () => {
     }
   };
 
-  console.log(userLogin);
   return (
     <div className="profil">
-      <h2>Mes informations</h2>
+      <h2 className="titleProfil">Mes informations</h2>
       <div className="informationsProfil">
         <p>{userLogin.firstname}</p>
         {updateFirstName && (

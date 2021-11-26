@@ -7,10 +7,10 @@
   background: #010c1e;
   z-index: 5;
 }
-.profil h2 {
-  margin: 0;
-  padding: 1em;
-  width: 100%;
+.titleProfil {
+  margin: 0 !important;
+  padding: 1em !important;
+  width: 100% !important;
   background: #4a6d88;
 }
 .informationsProfil {

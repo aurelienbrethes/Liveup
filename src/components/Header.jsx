@@ -38,7 +38,7 @@ const Header = () => {
             }}
             className="btnAccount"
           >
-            Mon compte
+            {userLogin.mail !== undefined ? "Mon Profil" : "Mon compte"}
           </button>
         </li>
 
