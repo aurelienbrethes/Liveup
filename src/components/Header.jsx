@@ -9,7 +9,6 @@ import UserContext from "../contexts/UserContext";
 const Header = () => {
   const [showLogin, setShowLogin] = useState("");
   const { userLogin } = useContext(UserContext);
-  console.log(showLogin);
 
   return (
     <div className="header">
