@@ -70,5 +70,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.displayNone{
+    display: none;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: center;
     background-color: #001e38;
 }
