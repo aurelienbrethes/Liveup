@@ -4,6 +4,7 @@ import home_video from '../../media/home_video.mp4'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import EventCard from "../EventCard";
+import Login from "../Login";
 
 const Home = () => {
   
@@ -42,10 +43,12 @@ const Home = () => {
                     </select>
                 }
                 <Carousel/>
-            <EventCard />            
+            <EventCard />   
+
             <div className="mapDiv">
             <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
+            <Login/>
         </div>
     )}
 
