@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #010c1e;
+  background: #29313b;
   z-index: 5;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   margin: 0 !important;
   padding: 1em !important;
   width: 100% !important;
-  background: #4a6d88;
+  background: #bb5657;
 }
 .informationsProfil {
   display: flex;
@@ -25,7 +25,7 @@
 }
 .informationsProfil p {
   padding: 1em;
-  background: #001e38;
+  background: #bb5657;
   border: 1px solid white;
   transition: 0.3s ease-out;
   letter-spacing: 3px;
