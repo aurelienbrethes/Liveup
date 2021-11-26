@@ -95,23 +95,23 @@ const positionCarousel5 = () => {
     <div className={carousel_rotate}>
       <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter1()} className={carouselFace1}>
         <img className="img_carousel" alt="concert1" src={img1}/>
-        <h3>Concert</h3>
+        <h3 className="carousel_h3" >Concert</h3>
       </div>
       <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter2()} className={carouselFace2}>
         <img className="img_carousel" alt="concert2" src={img2}/>
-        <h3>Concert</h3>
+        <h3 className="carousel_h3">Concert</h3>
       </div>
       <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter3()} className={carouselFace3}>
         <img className="img_carousel" alt="concert3" src={img3}/>
-        <h3>Concert</h3>
+        <h3 className="carousel_h3">Concert</h3>
       </div>
       <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter4()} className={carouselFace4}>
         <img className="img_carousel" alt="concert4" src={img4}/>
-        <h3>Concert</h3>
+        <h3 className="carousel_h3">Concert</h3>
       </div>
       <div  onMouseLeave={()=>mouseLeave()} onClick={()=>mouseEnter5()} className={carouselFace5}>
         <img className="img_carousel" alt="concert5" src={img5}/>
-        <h3>Concert</h3>
+        <h3 className="carousel_h3">Concert</h3>
       </div>
     </div>
   </div>

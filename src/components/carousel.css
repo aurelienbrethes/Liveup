@@ -77,3 +77,16 @@ span {
   width: 100%;
   height: 70%;
 }
+
+.carousel_h3{
+  padding-top: 8px;
+  text-decoration: underline;
+  font-size: 18px;
+  color: #f752e0;
+}
+
+.carousel_h2{
+  text-decoration: underline;
+  font-size: 25px;
+  color: #3dd8fc;
+}
