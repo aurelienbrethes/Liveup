@@ -2,23 +2,38 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #4a6d88;
+  background: #29313b;
 }
 
 .home h2 {
-  font-size: 25px;
-  font-style: italic;
+  font-size: 2em;
   padding-top: 50px;
   padding-bottom: 50px;
-  color: white;
   width: 80%;
-  background-color: #001e38;
-  margin-top: 50px;
+  color: #29313b;
+  font-family: "fontTitle";
 }
 
 .h2_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 3em;
+  background: #bb5657;
+  position: relative;
+}
+.btnPresentation {
+  margin: 2em;
+  background: #bb5657;
+  border: 2px solid #29313b;
+}
+.btnPresentation:hover {
+  background: #ce6a6c;
+}
+.h2_container p {
+  line-height: 1.5;
+  color: #29313b;
 }
 
 .videoCard {
@@ -30,10 +45,14 @@
 }
 .titleHeroHeader {
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
+  color: white;
+}
+.titleHeroHeader span {
+  color: #bb5657;
 }
 
 .background_video {
@@ -48,7 +67,9 @@
   position: absolute;
   background: none;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #bb5657;
+  outline: none;
+  color: white;
 }
 
 #selectCity {
@@ -62,12 +83,30 @@
 }
 
 .mapDiv {
-  padding-bottom: 4em;
+  margin-bottom: 4em;
+  background: #bb5657;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+  position: relative;
 }
 
 .mapDiv iframe {
-  width: 80vw;
+  width: 50%;
   height: 80vh;
+}
+.mapDiv div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+.mapDiv div p {
+  margin: 1em;
+  line-height: 1.5;
 }
 
 .displayNone {
@@ -92,5 +131,28 @@
 .logo_container {
   display: flex;
   justify-content: center;
-  background-color: #001e38;
+  background-color: #29313b;
+}
+#titleCaroussel {
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  color: #6a3b3c;
+  font-family: "fontTitle";
+  font-size: 5em;
+  letter-spacing: 6px;
+}
+#titleLocation {
+  text-transform: uppercase;
+  color: #6a3b3c;
+  font-family: "fontTitle";
+  font-size: 5em;
+  letter-spacing: 6px;
+  position: absolute;
+  top: -13%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
 }
