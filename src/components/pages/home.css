@@ -82,6 +82,14 @@
   margin-top: 4.5rem;
 }
 
+#linkCity {
+  z-index: 1;
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  border: 1px solid;
+}
+
 .mapDiv {
   margin-bottom: 4em;
   background: #bb5657;

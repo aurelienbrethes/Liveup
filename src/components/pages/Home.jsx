@@ -4,25 +4,12 @@ import home_video from "../medias/home_video.mp4";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import logo from "../medias/Live_up_1.gif";
-import EventCard from "../EventCard";
 
 const Home = () => {
   const [searchCity, setSearchCity] = useState("");
   const [allCities, setAllCities] = useState([]);
   const [videoCard, setVideoCard] = useState("displayNone");
   const [logo_liveup, setLogo_liveup] = useState("logo_liveup");
-  const [showCards, setShowCards] = useState(false);
-  const [event, setEvent] = useState([]);
-
-  useEffect(() => {
-    axios
-    .get('https://apiliveup.herokuapp.com/events')
-    .then((res) => res.data)
-    .then((data) => {
-        setEvent(data)
-    })
-}, [])
-
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,7 +30,7 @@ const Home = () => {
       })
       .catch((err) => console.log(err));
   }, [searchCity]);
-
+    
   return (
     <div className="home">
       <div className="logo_container">
@@ -51,7 +38,7 @@ const Home = () => {
       </div>
       <div className={videoCard}>
         <h1 className="titleHeroHeader">
-          Tr<span>o</span>uvez v<span>o</span>tre événement idéal<span>!</span>
+          Tr<span>o</span>uvez v<span>o</span>tre événement idéal<span> !</span>
         </h1>
         <video className="background_video" autoPlay loop muted>
           <source src={home_video} type="video/mp4" />
@@ -67,42 +54,33 @@ const Home = () => {
         {searchCity.length < 5 || searchCity.length > 5 ? (
           ""
         ) : (
+        <>
           <select name="city" id="selectCity">
             {allCities.map((city, index) => {
               return (
-                <option key={index} value={city.nom} onClick={() => setShowCards(!showCards)}>
-                  {city.nom}
+                <option key={index} value={city.nom}>
+                 {city.nom}
                 </option>
               );
             })}
           </select>
+          <a id="linkCity" href="/event">Les évènements dans ma ville</a>
+        </>
         )}
       </div>
-      {showCards ?
-                event
-                .map((info) => {
-                    return (
-                <div key={info.id}
-                aria-hidden="true">
-                    <div className="eventcard_container">
-                    <EventCard />
-                    </div>
-                </div>
-                )}) : "Restez à l'affut, les évènements arriveront prochainement dans votre ville !" }
       <div className="h2_container">
         <h2>C'est ici que tout commence!</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          quod optio nesciunt asperiores, debitis eaque accusantium molestiae
-          odio earum. Velit, ab reprehenderit? Debitis esse laborum saepe, natus
-          ipsum doloremque, eius ea nulla explicabo veritatis suscipit
-          obcaecati. Incidunt molestiae et iusto nulla dolorum. Officia error
-          corporis praesentium voluptatem explicabo, ratione ut deserunt
-          voluptatibus sunt, at corrupti.
+          Pour vous, artistes internationaux, artistes locaux, chargés de communication, gérants de bar, discothèques.. <br />
+          Vous qui connaissez les difficultés de programmer un évènement sur tous les supports disponibles en ligne pour attirer la clientèle,
+          ne cherchez plus : <br />
+          <strong>Live Up est là !</strong> <br />
+          Une seule et unique plateforme, pour tous, qui permet de tenir au courant vos fans les plus fidèles de vos évènements. <br />
+          <strong>Simple, gratuit, efficace, Live Up !</strong>
         </p>
         <h2 id="titleCaroussel">Nos événements à venir</h2>
         <button className="btnPresentation btn">
-          Voir tous les événements
+          <a href="/event">Voir tous les événements</a>
         </button>
       </div>
       <Carousel />
@@ -118,9 +96,11 @@ const Home = () => {
           <h4>Nadau</h4>
           <p>Bayonne</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            mollitia deleniti incidunt qui aliquid autem vitae, alias suscipit
-            non delectus facere voluptas deserunt, voluptatum est!
+          Nadau ou Los de Nadau est un groupe de musique gascon-béarnais créé en 1973 célébrant la culture gasconne et plus largement occitane.<br />
+          Nadau dépasse largement les frontières de sa base béarnaise et gasconne, afin de devenir le symbole même de la musique occitane et l'un des groupes emblématiques d'Occitanie. <br />
+          Les chansons De cap tà l'immortèla et L'encantada sont deux des chansons les plus célèbres de leur répertoire, <br />
+          qui ne comporte qu'une seule chanson en français: Mon Dieu que j'en suis à mon aise.<br />
+           Cette dernière chanson est également chantée en basque.
           </p>
         </div>
       </div>
