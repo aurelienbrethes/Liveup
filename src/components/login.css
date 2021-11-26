@@ -28,3 +28,6 @@
 .newAccount:hover {
   letter-spacing: 5px;
 }
+.redBorder{
+  border: 1px solid red;
+}
