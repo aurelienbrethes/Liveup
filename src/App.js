@@ -13,7 +13,6 @@ function App() {
       <BrowserRouter>
         <UserContextProvider>
           <Header />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/event" element={<Event />} />
