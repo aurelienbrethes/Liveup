@@ -9,8 +9,6 @@ const Event = () => {
     const [style, setStyle] = useState([]);
     const [openModal, setOpenModal] = useState('');
 
-
-
     useEffect(() => {
         axios
         .get('https://apiliveup.herokuapp.com/events')
