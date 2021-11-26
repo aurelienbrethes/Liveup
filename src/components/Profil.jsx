@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import UserContext from "../contexts/UserContext";
 import "./profil.css";
+import logout from "./medias/logout.png";
 
-const Profil = () => {
+const Profil = ({ setShowLogin }) => {
   const [updateFirstName, setUpdateFirstName] = useState(false);
   const [updateLastName, setUpdateLastName] = useState(false);
   const [updateMail, setUpdateMail] = useState(false);
@@ -160,6 +161,15 @@ const Profil = () => {
         >
           Modifier Mot de Passe
         </button>
+      </div>
+      <div
+        className="contImageLogout"
+        onClick={() => {
+          setUserLogin([]);
+          setShowLogin("");
+        }}
+      >
+        <img src={logout} alt="logout" />
       </div>
     </div>
   );

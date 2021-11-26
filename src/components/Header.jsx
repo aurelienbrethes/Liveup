@@ -10,7 +10,6 @@ import SignUp from "./sign-up/SignUp";
 const Header = () => {
   const [showLogin, setShowLogin] = useState("");
   const { userLogin } = useContext(UserContext);
-  console.log(showLogin);
 
   return (
     <div className="header">
@@ -19,17 +18,17 @@ const Header = () => {
         showLogin === "profil") && (
         <div onClick={() => setShowLogin("")} className="screenBlack"></div>
       )}
-      <Link activeClassName="active" to="/">
+      <Link activeclassname="active" to="/">
         <div id="logo">
           <img src={logo} />
         </div>
       </Link>
 
       <ul className="navMenu">
-        <Link activeClassName="active" to="/event">
+        <Link activeclassname="active" to="/event">
           <li>Les Evènements</li>
         </Link>
-        <Link activeClassName="active" to="/addEvent">
+        <Link activeclassname="active" to="/addEvent">
           <li>Ajouter un évènement</li>
         </Link>
         <li>
@@ -45,7 +44,7 @@ const Header = () => {
 
         {showLogin === "login" && <Login setShowLogin={setShowLogin} />}
         {showLogin === "profil" && <Profil />}
-        {showLogin === "signup" && <SignUp />}
+        {showLogin === "signup" && <SignUp setShowLogin={setShowLogin} />}
       </ul>
     </div>
   );

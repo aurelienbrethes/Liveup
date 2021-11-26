@@ -1,10 +1,8 @@
 import Carousel from "../Carousel";
-import Profil from "../Profil";
 import "../pages/home.css";
 import home_video from "../medias/home_video.mp4";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Login from "../Login";
 import logo from "../medias/Live_up_1.gif";
 
 const Home = () => {
@@ -39,6 +37,7 @@ const Home = () => {
         <img src={logo} className={logo_liveup} alt="logo Live up" />
       </div>
       <div className={videoCard}>
+        <h1 className="titleHeroHeader">Trouvez votre événement idéal!</h1>
         <video className="background_video" autoPlay loop muted>
           <source src={home_video} type="video/mp4" />
         </video>
