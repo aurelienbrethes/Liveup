@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import EventCard from '../EventCard';
 import './event.css';
 import axios from 'axios';
+import Modal from '../Modal';
 
 const Event = () => {
     const [event, setEvent] = useState([]);
     const [style, setStyle] = useState([]);
+    const [openModal, setOpenModal] = useState('');
+
 
 
     useEffect(() => {
@@ -25,6 +28,14 @@ const Event = () => {
             setStyle(data)
         })
     }, [])
+
+      /* Modal */
+  const showModal = (id) => {
+    setOpenModal(id);
+  };
+  const hideModal = () => {
+    setOpenModal('');
+  };
 
     return (
         <div className="event">
@@ -53,13 +64,43 @@ const Event = () => {
                     )})}
                 </select>
             </div>
-
             <div className="eventList">
-                {event.map((info, index) => { 
+                {event.map((info) => { 
                     return (
-                    <EventCard key= {index} artiste={info.artist_name} date={info.date} city={info.city} location={info.location}
-                    place={info.name_place} code={info.postal_code} style={info.style}
-                    time={info.time}/>
+                <div key={info.id} onClick={() => showModal(info.id)}
+                aria-hidden="true">
+                    <EventCard />
+                    {info.id === openModal && (
+                        <Modal
+                          openModal={openModal}
+                          showModal={showModal}
+                          hideModal={hideModal}
+                        >
+                          <div className="modalHeader">
+                              Coucou toi
+                          </div>
+                          <div className="modalFullInfo">
+                            <p>Artiste : {info.artist_name}</p>
+                            <p>Style : {info.style}</p>
+                            <p>Date : {info.date}</p>
+                            <p>Code Postal : {info.postal_code}</p>
+                            <p>Ville : {info.city}</p>
+                            <p>Adresse : {info.location ? info.location : "Inconnue"}</p>
+                            <p>Lieu : {info.name_place}</p>
+                            <p>Heure : {info.time}</p>
+                          </div>
+                          <div className="modalFooter">
+                          <button
+                            type="button"
+                            className="modalBtn"
+                            onClick={hideModal}
+                          >
+                            Close
+                          </button>
+                          </div>
+                        </Modal>
+                    )}
+                </div>
                 )})}
             </div>
         </div>

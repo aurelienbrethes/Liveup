@@ -17,7 +17,6 @@
 }
 
 .background_video {
-    filter: grayscale(90%);
     width: 100%;
 }
 
