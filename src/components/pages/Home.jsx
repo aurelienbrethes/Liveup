@@ -1,6 +1,6 @@
 import Carousel from "../Carousel";
 import '../pages/home.css'
-import home_video from '../../media/home_video.mp4'
+import home_video from '../medias/home_video.mp4'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 

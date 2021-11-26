@@ -36,24 +36,25 @@
   flex-direction: column;
 }
 
+
 .carousel__face h3{
   padding-top: 10px;
 }
 
 .carousel__face1 {
-  background-color: #4a6d88;
+  background-color: #001e38;
   transform: rotateY( 0deg) translateZ(400px); }
 .carousel__face2 { 
-  background-color: #4a6d88;
+  background-color: #001e38;
     transform: rotateY( 72deg) translateZ(400px); }
 .carousel__face3 {
-  background-color: #4a6d88;
+  background-color: #001e38;
   transform: rotateY( 144deg) translateZ(400px); }
 .carousel__face4 {
-  background-color: #4a6d88;
+  background-color: #001e38;
   transform: rotateY(216deg) translateZ(400px); }
 .carousel__face5 { 
-  background-color: #4a6d88;
+  background-color: #001e38;
   transform: rotateY(288deg) translateZ(400px); }
 
 
