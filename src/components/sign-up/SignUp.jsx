@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./signUp.css";
 
-const SignUp = () => {
+const SignUp = ({ setShowLogin }) => {
   const [userFirstname, setUserFirstname] = useState("");
   const [userLastname, setUserLastname] = useState("");
   const [userMail, setUserMail] = useState("");
@@ -38,6 +38,7 @@ const SignUp = () => {
         mail: userMail,
         password: userPassword,
       });
+      setShowLogin("");
     }
   };
 
@@ -55,69 +56,70 @@ const SignUp = () => {
   return (
     <div className="container-sign-up">
       <div className="sign-up">
-        <div className="title-sign-up space">
+        <div className="title-sign-up">
           <h2>Inscris-toi</h2>
         </div>
-        <div className="name space">
-          <input
-            type="text"
-            placeholder="Prénom"
-            onChange={(e) => setUserFirstname(e.target.value)}
-            value={userFirstname}
-          />
-          <input
-            type="text"
-            placeholder="Nom"
-            onChange={(e) => setUserLastname(e.target.value)}
-            value={userLastname}
-          />
-        </div>
-        <div className={`mail space width-input ${errorMail && "borderRed"}`}>
-          <input
-            type="email"
-            placeholder="Email"
-            onChange={(e) => setMailToCheck(e.target.value)}
-            value={mailToCheck}
-          />
-          {errorMail && <p>Cette adresse mail a déjà été utilisée</p>}
-        </div>
-        <div
-          className={`password space width-input ${
-            errorPassword && "borderRed"
-          }`}
-        >
-          <input
-            type="password"
-            placeholder="Entrez votre mot de passe"
-            onChange={(e) => setFirstPassword(e.target.value)}
-            value={firstPassword}
-          />
-        </div>
-        <div
-          className={`confirm-password width-input space ${
-            errorPassword && "borderRed"
-          }`}
-        >
-          <input
-            type="password"
-            placeholder="Confirmez votre mot de passe"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            value={confirmPassword}
-          />
-          {errorPassword && (
-            <p>Le mot de passe est différent que le précédent</p>
-          )}
-        </div>
-        <div className="btn-sign-up">
-          <button
-            type="button"
-            onClick={() => {
-              checkedPassword();
-              // resetData();
-            }}
+        <div className="container-input">
+          <div className="name space">
+            <input
+              type="text"
+              placeholder="Prénom"
+              onChange={(e) => setUserFirstname(e.target.value)}
+              value={userFirstname}
+            />
+            <input
+              type="text"
+              placeholder="Nom"
+              onChange={(e) => setUserLastname(e.target.value)}
+              value={userLastname}
+            />
+          </div>
+          <div className={`mail space width-input ${errorMail && "borderRed"}`}>
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setMailToCheck(e.target.value)}
+              value={mailToCheck}
+            />
+            {errorMail && <p>Cette adresse mail a déjà été utilisée</p>}
+          </div>
+          <div
+            className={`password space width-input ${
+              errorPassword && "borderRed"
+            }`}
           >
-            Confirmer
-          </button>
+            <input
+              type="password"
+              placeholder="Entrez votre mot de passe"
+              onChange={(e) => setFirstPassword(e.target.value)}
+              value={firstPassword}
+            />
+          </div>
+          <div
+            className={`confirm-password width-input space ${
+              errorPassword && "borderRed"
+            }`}
+          >
+            <input
+              type="password"
+              placeholder="Confirmez votre mot de passe"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              value={confirmPassword}
+            />
+            {errorPassword && (
+              <p>Le mot de passe est différent que le précédent</p>
+            )}
+          </div>
+          <div className="btn-sign-up">
+            <button
+              type="button"
+              onClick={() => {
+                checkedPassword();
+              }}
+            >
+              Confirmer
+            </button>
+          </div>
         </div>
       </div>
     </div>
