@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
-            <Link to="/">
+            <Link activeClassName="active" to="/">
             <div id="logo"><img src={logo}/></div>
             </Link>
             <ul className="navMenu">
-                <Link to="/event">
+                <Link activeClassName="active" to="/event">
                     <li>Les Evènements</li>
                 </Link>
-                <Link to="/addEvent">
+                <Link activeClassName="active" to="/addEvent">
                 <li>Ajouter un évènement</li>
                 </Link>
-                <Link to="/account">
+                <Link activeClassName="active" to="/account">
                 <li>Mon compte</li>
                 </Link>
             </ul>
