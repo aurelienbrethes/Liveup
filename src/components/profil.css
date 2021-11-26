@@ -1,16 +1,41 @@
 .profil {
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #010c1e;
-  width: 80%;
-  height: 100%;
+  z-index: 5;
 }
 .profil h2 {
-  background: #001e38;
   margin: 0;
-  padding: 0;
   padding: 1em;
+  width: 100%;
+  background: #4a6d88;
 }
 .informationsProfil {
   display: flex;
+  flex-direction: column;
+  padding: 1em 3em;
   justify-content: space-around;
-  height: 100%;
+}
+.informationsProfil p {
+  padding: 1em;
+  background: #001e38;
+  border: 1px solid white;
+  transition: 0.3s ease-out;
+  letter-spacing: 3px;
+}
+.informationsProfil > * {
+  margin: 0.5em;
+}
+.btnProfil {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  text-decoration: underline;
+}
+.btnProfil:hover {
+  letter-spacing: 5px;
 }
