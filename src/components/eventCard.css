@@ -6,11 +6,11 @@
     background-color: #001e38;
     object-fit: cover;
     overflow: hidden;
-    border-radius: 10px;
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 20px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .eventTitle {

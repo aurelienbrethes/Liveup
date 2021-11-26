@@ -18,7 +18,7 @@ const Home = () => {
         const timer = setTimeout(() => {
             setVideoCard('videoCard');
             setLogo_liveup('displayNone');
-        }, 5000); 
+        }, 3000); 
         return () => {
             clearInterval(timer);
         }

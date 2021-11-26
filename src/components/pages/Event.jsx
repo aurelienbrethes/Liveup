@@ -9,6 +9,8 @@ const Event = () => {
     const [style, setStyle] = useState([]);
     const [openModal, setOpenModal] = useState('');
 
+    console.log(openModal);
+
     useEffect(() => {
         axios
         .get('https://apiliveup.herokuapp.com/events')
@@ -33,11 +35,11 @@ const Event = () => {
   };
   const hideModal = () => {
     setOpenModal('');
+    console.log('hide');
   };
 
     return (
         <div className="event">
-
             <div className="eventFilters">
                 <div className="selectFilter">
                 <p>Artiste :</p>
@@ -74,37 +76,45 @@ const Event = () => {
             <div className="eventList">
                 {event.map((info) => { 
                     return (
-                <div key={info.id} onClick={() => showModal(info.id)}
+                <div key={info.id}
                 aria-hidden="true">
+                    <div className="eventcard_container" onClick={() => showModal(info.id)}>
                     <EventCard />
+                    </div>
                     {info.id === openModal && (
                         <Modal
                           openModal={openModal}
-                          showModal={showModal}
                           hideModal={hideModal}
                         >
-                          <div className="modalHeader">
-                              Coucou toi
-                          </div>
-                          <div className="modalFullInfo">
-                            <p>Artiste : {info.artist_name}</p>
-                            <p>Style : {info.style}</p>
-                            <p>Date : {info.date}</p>
-                            <p>Code Postal : {info.postal_code}</p>
-                            <p>Ville : {info.city}</p>
-                            <p>Adresse : {info.location ? info.location : "Inconnue"}</p>
-                            <p>Lieu : {info.name_place}</p>
-                            <p>Heure : {info.time}</p>
-                          </div>
-                          <div className="modalFooter">
-                          <button
-                            type="button"
-                            className="modalBtn"
-                            onClick={hideModal}
-                          >
-                            Close
-                          </button>
-                          </div>
+                            <div className='modalGrid'>
+                                <aside className="left">
+                                    <img src="" alt="" />
+                                </aside>
+                                <aside className="right">
+                                    <div className="modalHeader">
+                                        <h3>Votre évènement !</h3>
+                                    </div>
+                                    <div className="modalFullInfo">
+                                        <p>Artiste : {info.artist_name}</p>
+                                        <p>Style : {info.style}</p>
+                                        <p>Date : {info.date}</p>
+                                        <p>Code Postal : {info.postal_code}</p>
+                                        <p>Ville : {info.city}</p>
+                                        <p>Adresse : {info.location ? info.location : "Inconnue"}</p>
+                                        <p>Lieu : {info.name_place}</p>
+                                        <p>Heure : {info.time}</p>
+                                    </div>
+                                    <div className="modalFooter">
+                                        <button
+                                            type="button"
+                                            className="modalBtn"
+                                            onClick={hideModal}
+                                        >
+                                            Close
+                                        </button>                                    
+                                    </div>
+                                </aside>
+                            </div>
                         </Modal>
                     )}
                 </div>
