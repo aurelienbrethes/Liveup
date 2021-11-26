@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import './addevent.css';
-=======
-import React from "react";
-import "./addevent.css";
->>>>>>> 0c801218d9c678ceba0dcc6641dfdcceef220861
+import React from "react"
+import "./addevent.css"
 
 const AddEvent = () => {
   return (
