@@ -55,7 +55,6 @@ const Event = () => {
   // sélection de l'image des cards
 
   let image_style;
-
   const selectImages = (element) => {
 
     switch (element) {
@@ -163,7 +162,7 @@ const selectStyle = (element) => {
             event_style = 'reggae';
         break;
         case 145:
-            image_style = 'electro';
+            event_style = 'electro';
         break;
         case 155:
             event_style = 'house';
