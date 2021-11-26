@@ -42,10 +42,14 @@ const Home = () => {
                     </select>
                 }
             </div>
-                <Carousel/>        
+            <div className="h2_container">
+                <h2>Make yours nights great again</h2>
+            </div>
+                <Carousel/>                  
             <div className="mapDiv">
                 <iframe title="locations" src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
+            
         </div>
     )}
 

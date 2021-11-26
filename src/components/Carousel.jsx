@@ -92,8 +92,7 @@ const positionCarousel5 = () => {
 }
 
  return(
-  <div className="container">
-    <h2>Evènements à venir</h2>
+  <div className="container">   
     <div className={carousel_rotate}>
       <div  onMouseLeave={()=>mouseLeave()} onClick={()=>onClick1()} className={carouselFace1}>
         <img className="img_carousel" alt="concert1" src={img1}/>
