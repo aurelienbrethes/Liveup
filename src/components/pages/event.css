@@ -1,69 +1,101 @@
 .event {
-    display: flex;
-    flex-direction: column;
-    align-items: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
 }
 
-.modalGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
+.modalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
 }
 
-.left{
-    grid-column: 1/2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.left {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.right{
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.right {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .right p {
-    padding-top: 14px;
+  padding-top: 14px;
 }
 
 .eventList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: linear-gradient(180deg, #bb5657 50%, #29313b 50%);
 }
 
 .eventFilters {
-    display: flex;
-    justify-content: space-around;
-    height: 70%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  height: 70%;
+  padding: 2em;
+  background: #29313b;
 }
 
 .eventFilters select {
-    width: 10vw;
-    height: 4vh;
-    background-color: #c6cdd7;
+  width: 10vw;
+  height: 4vh;
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #bb5657;
+  outline: none;
 }
 
 .selectFilter {
-    display: flex;
-    justify-content: space-around;
-    color: #c6cdd7;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  color: #c6cdd7;
+  align-items: center;
 }
 
 .selectFilter p {
-    color: #c6cdd7;
-    margin-right: 10px;
+  color: #c6cdd7;
+  margin-right: 10px;
 }
 
-.eventcard_container{
-    cursor: pointer;
+.eventcard_container {
+  cursor: pointer;
 }
 
-.imageModale{
-    max-height: 80%;
+.imageModale {
+  max-height: 80%;
+}
+.heroHeaderEvents {
+  height: 100vh;
+  background: #bb5657;
+  display: flex;
+  position: relative;
+}
+.contImageEvent {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: rotateZ(25deg);
+}
+.contTitleEvent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 50%;
+}
+.contTitleEvent h1 {
+  font-family: "fontTitle";
+  font-size: 5em;
+  color: #29313b;
+}
+.contImageEvent img {
+  width: 100%;
 }

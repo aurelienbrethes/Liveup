@@ -1,86 +1,86 @@
-import React, { useEffect, useState } from 'react';
-import EventCard from '../EventCard';
-import './event.css';
-import axios from 'axios';
-import Modal from '../Modal';
-import autres from '../medias/autres.png';
-import blues from '../medias/blues.jpg';
-import country from '../medias/country.jpg';
-import electro from '../medias/electro.jpg';
-import folk from '../medias/folk.jpg';
-import hip_hop from '../medias/hip_hop.png';
-import house from '../medias/house.jpg';
-import jazz from '../medias/jazz.png';
-import metal from '../medias/metal.jpg';
-import pop from '../medias/pop.jpg';
-import punk from '../medias/punk.png';
-import rap from '../medias/rap.jpg';
-import reggae from '../medias/reggae.jpg';
-import rnb from '../medias/rnb.jpg';
-import rock from '../medias/rock.jpg';
-import soul from '../medias/soul.jpg';
-import funk from '../medias/funk.jpg';
+import React, { useEffect, useState } from "react";
+import EventCard from "../EventCard";
+import "./event.css";
+import axios from "axios";
+import Modal from "../Modal";
+import autres from "../medias/autres.png";
+import blues from "../medias/blues.jpg";
+import country from "../medias/country.jpg";
+import electro from "../medias/electro.jpg";
+import folk from "../medias/folk.jpg";
+import hip_hop from "../medias/hip_hop.png";
+import house from "../medias/house.jpg";
+import jazz from "../medias/jazz.png";
+import metal from "../medias/metal.jpg";
+import pop from "../medias/pop.jpg";
+import punk from "../medias/punk.png";
+import rap from "../medias/rap.jpg";
+import reggae from "../medias/reggae.jpg";
+import rnb from "../medias/rnb.jpg";
+import rock from "../medias/rock.jpg";
+import soul from "../medias/soul.jpg";
+import funk from "../medias/funk.jpg";
+import casque from "../medias/casque.svg";
 
 const Event = () => {
-    const [event, setEvent] = useState([]);
-    const [style, setStyle] = useState([]);
-    const [artistFilter, setArtistFilter] = useState('');
-    const [cityFilter, setCityFilter] = useState('');
-    const [dateFilter, setDateFilter] = useState('');
-    const [styleFilter, setStyleFilter] = useState('');
-    const [showCards, setShowCards] = useState(false);
-    const [openModal, setOpenModal] = useState('');
+  const [event, setEvent] = useState([]);
+  const [style, setStyle] = useState([]);
+  const [artistFilter, setArtistFilter] = useState("");
+  const [cityFilter, setCityFilter] = useState("");
+  const [dateFilter, setDateFilter] = useState("");
+  const [styleFilter, setStyleFilter] = useState("");
+  const [showCards, setShowCards] = useState(false);
+  const [openModal, setOpenModal] = useState("");
 
-    useEffect(() => {
-        axios
-        .get('https://apiliveup.herokuapp.com/events')
-        .then((res) => res.data)
-        .then((data) => {
-            setEvent(data)
-        })
-    }, [])
+  useEffect(() => {
+    axios
+      .get("https://apiliveup.herokuapp.com/events")
+      .then((res) => res.data)
+      .then((data) => {
+        setEvent(data);
+      });
+  }, []);
 
-    useEffect(() => {
-        axios
-        .get('https://apiliveup.herokuapp.com/styles')
-        .then((res) => res.data)
-        .then((data) => {
-            setStyle(data)
-        })
-    }, []);
+  useEffect(() => {
+    axios
+      .get("https://apiliveup.herokuapp.com/styles")
+      .then((res) => res.data)
+      .then((data) => {
+        setStyle(data);
+      });
+  }, []);
 
-      /* Modal */
+  /* Modal */
   const showModal = (id) => {
     setOpenModal(id);
   };
   const hideModal = () => {
-    setOpenModal('');
+    setOpenModal("");
   };
 
   function handleChange(e) {
     switch (e.target.name) {
-      case 'artistSelect':
+      case "artistSelect":
         setArtistFilter(e.target.value);
-        console.log(artistFilter)
+        console.log(artistFilter);
         break;
-      case 'citySelect':
+      case "citySelect":
         setCityFilter(e.target.value);
-        console.log(cityFilter)
+        console.log(cityFilter);
         break;
-      case 'dateSelect':
+      case "dateSelect":
         setDateFilter(e.target.value);
-        console.log(dateFilter)
+        console.log(dateFilter);
         break;
-      case 'styleSelect':
+      case "styleSelect":
         setStyleFilter(e.target.value);
-        console.log(styleFilter)
+        console.log(styleFilter);
         break;
       default:
     }
   }
-  
-  // sélection de l'image des cards
 
+  // sélection de l'image des cards
     let image_style;
     const selectImages = (element) => {
 
@@ -308,59 +308,71 @@ const Event = () => {
                         </div>
                     </Modal>
                     )}
-                </div>
-                )}) : 
-                event.map((info) => {
-                    return (
-                <div key={info.id}
-                aria-hidden="true">
-                    <div className="eventcard_container" onClick={() =>
-                        showModal(info.id)
-                    }>
+                  </div>
+                );
+              })
+          : event.map((info) => {
+              return (
+                <div key={info.id} aria-hidden="true">
+                  <div
+                    className="eventcard_container"
+                    onClick={() => showModal(info.id)}
+                  >
                     {selectImages(info.style)}
                     {selectStyle(info.style)}
-                    <EventCard image={image_style} location={info.city} artist={info.artist_name}/>
-                    </div>
-                    {info.id === openModal && (
-                        <Modal
-                          openModal={openModal}
-                          hideModal={hideModal}
-                        >
-                            <div className='modalGrid'>
-                                <aside className="left">
-                                    <img width="400px" className="imageModale" src={image_style} alt="modale" />
-                                </aside>
-                                <aside className="right">
-                                    <div className="modalHeader">
-                                        <h3>Votre évènement !</h3>
-                                    </div>
-                                    <div className="modalFullInfo">
-                                        <p>{info.artist_name}</p>
-                                        <p>{event_style}</p>
-                                        <p>{info.date}</p>
-                                        <p>{info.time}</p>
-                                        <p>{info.name_place}</p>
-                                        <p>{info.location ? info.location : "Inconnue"}</p>
-                                        <p>{info.postal_code} {info.city}</p>                       
-                                    </div>
-                                    <div className="modalFooter">
-                                        <button
-                                            type="button"
-                                            className="modalBtn"
-                                            onClick={hideModal}
-                                        >
-                                            Close
-                                        </button>                                    
-                                    </div>
-                                </aside>
-                            </div>
-                        </Modal>
-                    )}
+                    <EventCard
+                      image={image_style}
+                      location={info.city}
+                      artist={info.artist_name}
+                    />
+                  </div>
+
+                  {info.id === openModal && (
+                    <Modal openModal={openModal} hideModal={hideModal}>
+                      <div className="modalGrid">
+                        <aside className="left">
+                          <img
+                            width="400px"
+                            className="imageModale"
+                            src={image_style}
+                            alt="modale"
+                          />
+                        </aside>
+                        <aside className="right">
+                          <div className="modalHeader">
+                            <h3>Votre évènement !</h3>
+                          </div>
+                          <div className="modalFullInfo">
+                            <p>{info.artist_name}</p>
+                            <p>{event_style}</p>
+                            <p>{info.date}</p>
+                            <p>{info.time}</p>
+                            <p>{info.name_place}</p>
+                            <p>{info.location ? info.location : "Inconnue"}</p>
+                            <p>
+                              {info.postal_code}
+                              {info.city}
+                            </p>
+                          </div>
+                          <div className="modalFooter">
+                            <button
+                              type="button"
+                              className="modalBtn"
+                              onClick={hideModal}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </aside>
+                      </div>
+                    </Modal>
+                  )}
                 </div>
-                )})}
-            </div>
-        </div>
-    );
+              );
+            })}
+      </div>
+    </div>
+  );
 };
 
 export default Event;
