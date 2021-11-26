@@ -47,12 +47,17 @@ const AddEvent = () => {
   return (
     <div>
       <div className="contAddEvent">
-        <div className="contTitleAddEvent">
-          <span className="circle"></span>
-          <h1>Ajoutez votre évènement !</h1>
-        </div>
+        <h1 id="titleAddEvent">Ajoutez votre évènement !</h1>
         <div className="contImageAddEvent">
-          <img src="" alt="" />
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
       <div className="addEventInput">

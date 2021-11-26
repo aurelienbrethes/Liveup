@@ -8,14 +8,173 @@
   height: 100%;
 }
 .contImageAddEvent {
-  width: 50%;
+  width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.contImageAddEvent div:nth-child(1) {
+  background: url("../medias/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/1/6/2;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(1):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb56583a;
+}
+.contImageAddEvent div:nth-child(2) {
+  background: url("../medias/image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/2/4/3;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb565871;
+}
+.contImageAddEvent div:nth-child(3) {
+  background: url("../medias/image3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/3/7/5;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(3):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb56588c;
+}
+.contImageAddEvent div:nth-child(4) {
+  background: url("../medias/image4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/5/6/6;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(4):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb565894;
+}
+.contImageAddEvent div:nth-child(5) {
+  background: url("../medias/image5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 6/1/11/3;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(5):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb56586c;
+}
+.contImageAddEvent div:nth-child(6) {
+  background: url("../medias/image6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 7/3/11/4;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(6):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb565871;
+}
+.contImageAddEvent div:nth-child(7) {
+  background: url("../medias/image7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 4/2/6/3;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(7):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb565871;
+}
+.contImageAddEvent div:nth-child(8) {
+  background: url("../medias/image8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 7/4/11/5;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(8):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb5658a6;
+}
+.contImageAddEvent div:nth-child(9) {
+  background: url("../medias/image9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 5/5/11/6;
+  position: relative;
+}
+.contImageAddEvent div:nth-child(9):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb565850;
 }
 
 .addEventInput {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #29313b;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .addEventInput input {
@@ -26,7 +185,7 @@
   margin: 20px 0;
   height: 10%;
   width: 25%;
-  background-color: #001e38;
+  background-color: #bb5657;
   border: 1px solid white;
   padding: 10px;
   cursor: pointer;
@@ -38,4 +197,16 @@ input::-webkit-calendar-picker-indicator {
 
 .inpt::placeholder {
   color: white;
+}
+#titleAddEvent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-family: "fontTitle";
+  font-size: 4em;
+  width: 100%;
+  color: white;
+  letter-spacing: 5px;
 }
