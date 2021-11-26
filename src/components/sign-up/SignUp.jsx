@@ -52,15 +52,6 @@ const SignUp = () => {
     }
   };
 
-  // const resetData = () => {
-  //   setUserFirstname("");
-  //   setUserLastname("");
-  //   setMailToCheck("");
-  //   setFirstPassword("");
-  //   setConfirmPassword("");
-  //   setUserPassword("");
-  // };
-
   return (
     <div className="container-sign-up">
       <div className="sign-up">
