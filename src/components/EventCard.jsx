@@ -7,7 +7,7 @@ const EventCard = () => {
     return (
         <div className="eventCard">
             <img src={eventImg} alt="Live event" />
-            <h3>Voir l'évènement</h3>
+            <div className="eventTitle">Voir l'évènement</div>
         </div>
     );
 };
