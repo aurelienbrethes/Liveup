@@ -3,7 +3,6 @@ import '../pages/home.css'
 import home_video from '../../media/home_video.mp4'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-import EventCard from "../EventCard";
 
 const Home = () => {
   
@@ -45,7 +44,7 @@ const Home = () => {
             </div>
                 <Carousel/>        
             <div className="mapDiv">
-                <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
+                <iframe title="locations" src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>
             </div>
         </div>
     )}
