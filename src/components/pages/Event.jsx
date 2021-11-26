@@ -26,8 +26,6 @@ const Event = () => {
     const [style, setStyle] = useState([]);
     const [openModal, setOpenModal] = useState('');
 
-    console.log(openModal);
-
     useEffect(() => {
         axios
         .get('https://apiliveup.herokuapp.com/events')
@@ -43,7 +41,6 @@ const Event = () => {
         .then((res) => res.data)
         .then((data) => {
             setStyle(data)
-            console.log(data)
         })
     }, []);
 
@@ -53,8 +50,9 @@ const Event = () => {
   };
   const hideModal = () => {
     setOpenModal('');
-    console.log('hide');
   };
+
+  // sélection de l'image des cards
 
   let image_style;
 
@@ -115,6 +113,67 @@ const Event = () => {
     }
 }
 
+ // sélection du style dans la modale
+
+let event_style;
+
+const selectStyle = (element) => {
+
+    switch (element) {
+        case 5:
+            event_style = 'rock';
+        break;
+        case 15:
+            event_style = 'pop';
+        break;
+        case 25:
+            event_style = 'jazz';
+        break;
+        case 35:
+            event_style = 'soul';
+        break;
+        case 45:
+            event_style = 'rap';
+        break;
+        case 55:
+            event_style = 'folk';    
+        break;
+        case 65:
+            event_style = 'punk'; 
+        break;
+        case 75:
+            event_style = 'metal'; 
+        break;
+        case 85:
+            event_style = 'hip_hop';
+        break;
+        case 95:
+            event_style = 'rnb';
+        break;
+        case 105:
+            event_style = 'blues';
+        break;
+        case 115:
+            event_style = 'country';
+        break;
+        case 125:
+            event_style = 'funk';
+        break;
+        case 135:
+            event_style = 'reggae';
+        break;
+        case 145:
+            image_style = 'electro';
+        break;
+        case 155:
+            event_style = 'house';
+        break;
+        default:
+            event_style = 'autres';
+        break;
+    }
+}
+
     return (
         <div className="event">
             <div className="eventFilters">
@@ -158,9 +217,11 @@ const Event = () => {
                     <div className="eventcard_container" onClick={() =>
                         showModal(info.id)
                     }>
-                    <EventCard />
+                    {selectImages(info.style)}
+                    {selectStyle(info.style)}
+                    <EventCard image={image_style} location={info.city} artist={info.artist_name}/>
                     </div>
-                    {selectImages(info.id)}
+                    
                     {info.id === openModal && (
                         <Modal
                           openModal={openModal}
@@ -168,7 +229,7 @@ const Event = () => {
                         >
                             <div className='modalGrid'>
                                 <aside className="left">
-                                    <img width="400px" className="imageModale" src={image_style} alt="toto" />
+                                    <img width="400px" className="imageModale" src={image_style} alt="modale" />
                                 </aside>
                                 <aside className="right">
                                     <div className="modalHeader">
@@ -176,7 +237,7 @@ const Event = () => {
                                     </div>
                                     <div className="modalFullInfo">
                                         <p>Artiste : {info.artist_name}</p>
-                                        <p>Style : {info.style}</p>
+                                        <p>Style : {event_style}</p>
                                         <p>Date : {info.date}</p>
                                         <p>Code Postal : {info.postal_code}</p>
                                         <p>Ville : {info.city}</p>
