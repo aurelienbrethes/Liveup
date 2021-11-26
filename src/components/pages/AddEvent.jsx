@@ -54,16 +54,20 @@ const AddEvent = () => {
           onChange={(e) => setArtistName(e.target.value)}
           value={artistName}
           className="inpt"
+          required
         />
         <input
           type="date"
           onChange={(e) => setEventDate(e.target.value)}
-          className="inpt"
+          className="inpt moove-left-date"
+          required
         />
         <input
           type="time"
           onChange={(e) => setEventTime(e.target.value)}
-          className="inpt"
+          className="inpt moove-left-time"
+          placeholder="hh:mm"
+          required
         />
         <input
           type="text"
@@ -71,6 +75,7 @@ const AddEvent = () => {
           onChange={(e) => setEventNamePlace(e.target.value)}
           value={eventNamePlace}
           className="inpt"
+          required
         />
         <input
           type="text"
@@ -87,6 +92,7 @@ const AddEvent = () => {
           min="00000"
           max="99999"
           className="inpt"
+          required
         />
         <input
           type="text"
@@ -94,12 +100,15 @@ const AddEvent = () => {
           onChange={(e) => setEventCity(e.target.value)}
           value={eventCity}
           className="inpt"
+          required
         />
         <select
           name="music-styles"
           id="music-styles"
           onChange={(e) => setEventStyle(e.target.value)}
           value={eventStyle}
+          className="dropdown-list"
+          required
         >
           <option value="">Sélectionez votre style de musique</option>
           {stylesList.map((style) => (
@@ -111,7 +120,7 @@ const AddEvent = () => {
         <button
           type="reset"
           onClick={() => {
-            // handleAddEvents();
+            handleAddEvents();
             resetData();
           }}
           className="btn"
