@@ -22,6 +22,7 @@ const Home = () => {
   
     return (
         <div className="home">
+            <div className="videoCard">
             <video className='background_video' autoPlay loop muted>
                 <source src={home_video} type='video/mp4' />
             </video>
@@ -41,6 +42,7 @@ const Home = () => {
                         )})}
                     </select>
                 }
+            </div>
                 <Carousel/>        
             <div className="mapDiv">
                 <iframe src="https://www.google.com/maps/d/embed?mid=1PZ20cNpFYQgxdScopsIzGguV4Vo1oayL" width="640" height="480"></iframe>

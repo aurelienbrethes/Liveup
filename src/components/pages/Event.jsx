@@ -55,10 +55,12 @@ const Event = () => {
             </div>
 
             <div className="eventList">
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
+                {event.map((info, index) => { 
+                    return (
+                    <EventCard key= {index} artiste={info.artist_name} date={info.date} city={info.city} location={info.location}
+                    place={info.name_place} code={info.postal_code} style={info.style}
+                    time={info.time}/>
+                )})}
             </div>
         </div>
     );
