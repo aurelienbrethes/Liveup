@@ -1,0 +1,75 @@
+.container-sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #010c1e;
+}
+
+.container-sign-up input {
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.sign-up {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  background-color: #4a6d88;
+  padding: 0 2% 2% 2%;
+  border-radius: 20px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name input {
+  width: 40%;
+}
+
+.mail {
+  width: 100%;
+}
+
+.width-input input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.space {
+  padding-bottom: 10%;
+}
+
+.btn-sign-up button {
+  height: 35px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: white;
+  color: #010c1e;
+  border: 1px solid #010c1e;
+  font-size: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn-sign-up button:hover {
+  transform: scale(1.05);
+  background-color: #010c1e;
+  border: 1px solid white;
+  color: white;
+}
+
+.title-sign-up h2 {
+  font-size: 2rem;
+}
+
+.borderRed input {
+  border: 2px solid red;
+}
+
+.borderRed p {
+  color: red;
+}

@@ -5,11 +5,12 @@ import Event from './components/pages/Event';
 import AddEvent from './components/pages/AddEvent';
 import Account from './components/pages/Account';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignUp from './components/sign-up/SignUp';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +18,8 @@ function App() {
         <Route path="/addEvent" element={<AddEvent />} />
         <Route path="/account" element={<Account />} />
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <SignUp />
     </div>
   );
 }
