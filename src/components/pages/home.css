@@ -81,6 +81,15 @@
   position: absolute;
   margin-top: 4.5rem;
 }
+
+#linkCity {
+  z-index: 1;
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  border: 1px solid;
+}
+
 .mapDiv {
   margin-bottom: 4em;
   background: #bb5657;
@@ -90,6 +99,7 @@
   padding: 5em 0;
   position: relative;
 }
+
 .mapDiv iframe {
   width: 50%;
   height: 80vh;
