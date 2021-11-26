@@ -124,7 +124,7 @@ blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -139,7 +139,5 @@ a {
 
 * {
   font-family: "Roboto", sans-serif;
-}
-p {
-  color: white;
+  color: black;
 }

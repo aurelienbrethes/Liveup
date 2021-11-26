@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import logo from "./medias/Live_up_1.gif";
+import logo from "./medias/Live_up_1.jpg";
 import "./header.css";
 import { Link } from "react-router-dom";
 import Profil from "./Profil";
@@ -7,12 +7,12 @@ import Login from "./Login";
 import UserContext from "../contexts/UserContext";
 import SignUp from "./sign-up/SignUp";
 
-const Header = () => {
+const Header = ({ wheel, setWheel }) => {
   const [showLogin, setShowLogin] = useState("");
   const { userLogin } = useContext(UserContext);
 
   return (
-    <div className="header">
+    <div className={`header ${wheel && "activeBarWheel"}`}>
       {(showLogin === "login" ||
         showLogin === "signup" ||
         showLogin === "profil") && (
@@ -23,7 +23,7 @@ const Header = () => {
           <img src={logo} />
         </div>
       </Link>
-
+      <div className="containerNavMenu">
       <ul className="navMenu">
         <Link activeclassname="active" to="/event">
           <li>Les Evènements</li>
@@ -46,6 +46,7 @@ const Header = () => {
         {showLogin === "profil" && <Profil setShowLogin={setShowLogin} />}
         {showLogin === "signup" && <SignUp setShowLogin={setShowLogin} />}
       </ul>
+    </div>
     </div>
   );
 };

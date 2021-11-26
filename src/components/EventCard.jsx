@@ -1,12 +1,11 @@
 import React from "react";
 import "./eventCard.css";
-import eventImg from "./medias/music-event-background.jpg";
 
-const EventCard = () => {
+const EventCard = ({image, location, artist}) => {
   return (
     <div className="eventCard">
-      <img src={eventImg} alt="Live event" />
-      <div className="eventTitle">Voir l'évènement</div>
+      <img src={image} alt="Live event" className="imageCard" />
+      <div className="eventTitle">{`${artist} à ${location}`}</div>
     </div>
   );
 };
