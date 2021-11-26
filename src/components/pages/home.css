@@ -57,3 +57,17 @@
     height: 80vh;;
 }
 
+.logo_liveup{
+    height: 80vh;
+    width: 80vh;
+}
+
+.displayNone{
+    display: none;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: center;
+    background-color: #001e38;
+}
