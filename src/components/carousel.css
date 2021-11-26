@@ -36,14 +36,12 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .carousel__face:hover {
-  transition: transform .2s;
+  transition: transform .4s;
   zoom: 1.1;
-  border-width: 3px;
-  border-style:inset;
-  border-color: #3dd8fc;
 }
 
 .carousel__face h3{
