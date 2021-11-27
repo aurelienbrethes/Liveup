@@ -278,33 +278,54 @@ const Event = () => {
                         openModal={openModal}
                         hideModal={hideModal}
                     >
-                        <div className='modalGrid'>
-                            <aside className="left">
-                                <img width="400px" className="imageModale" src={image_style} alt="modale" />
-                            </aside>
-                            <aside className="right">
-                                <div className="modalHeader">
-                                    <h3>Votre évènement !</h3>
-                                </div>
-                                <div className="modalFullInfo">
-                                    <p>{info.artist_name}</p>
-                                    <p>{event_style}</p>
-                                    <p>{info.date}</p>
-                                    <p>{info.time}</p>
-                                    <p>{info.name_place}</p>
-                                    <p>{info.location ? info.location : "Inconnue"}</p>
-                                    <p>{info.postal_code} {info.city}</p>                       
-                                </div>
-                                <div className="modalFooter">
-                                    <button
-                                        type="button"
-                                        className="modalBtn"
-                                        onClick={hideModal}
-                                    >
-                                        Close
-                                    </button>                                    
-                                </div>
-                            </aside>
+                      {selectImages(info.style)}
+                      {selectStyle(info.style)}
+                      <EventCard
+                        image={image_style}
+                        location={info.city}
+                        artist={info.artist_name}
+                      />
+                    </div>
+
+                    {info.id === openModal && (
+                      <Modal openModal={openModal} hideModal={hideModal}>
+                        <div className="modalGrid">
+                          <aside className="left">
+                            <img
+                              width="400px"
+                              className="imageModale"
+                              src={image_style}
+                              alt="modale"
+                            />
+                          </aside>
+                          <aside className="right">
+                            <div className="modalHeader">
+                              <h3>Votre évènement !</h3>
+                            </div>
+                            <div className="modalFullInfo">
+                              <p>{info.artist_name}</p>
+                              <p>{event_style}</p>
+                              <p>{info.date}</p>
+                              <p>{info.time}</p>
+                              <p>{info.name_place}</p>
+                              <p>
+                                {info.location ? info.location : "Inconnue"}
+                              </p>
+                              <p>
+                                {info.postal_code}
+                                {info.city}
+                              </p>
+                            </div>
+                            <div className="modalFooter">
+                              <button
+                                type="button"
+                                className="modalBtn"
+                                onClick={hideModal}
+                              >
+                                Close
+                              </button>
+                            </div>
+                          </aside>
                         </div>
                     </Modal>
                     )}
