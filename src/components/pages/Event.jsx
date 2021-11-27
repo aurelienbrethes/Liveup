@@ -332,30 +332,43 @@ const Event = () => {
                       className="eventcard_container"
                       onClick={() => showModal(info.id)}
                     >
-                      <EventCard />
+                      {selectImages(info.style)}
+                      {selectStyle(info.style)}
+                      <EventCard
+                        image={image_style}
+                        location={info.city}
+                        artist={info.artist_name}
+                      />
                     </div>
+
                     {info.id === openModal && (
                       <Modal openModal={openModal} hideModal={hideModal}>
                         <div className="modalGrid">
                           <aside className="left">
-                            <img src="" alt="" />
+                            <img
+                              width="400px"
+                              className="imageModale"
+                              src={image_style}
+                              alt="modale"
+                            />
                           </aside>
                           <aside className="right">
                             <div className="modalHeader">
                               <h3>Votre évènement !</h3>
                             </div>
                             <div className="modalFullInfo">
-                              <p>Artiste : {info.artist_name}</p>
-                              <p>Style : {info.style}</p>
-                              <p>Date : {info.date}</p>
-                              <p>Code Postal : {info.postal_code}</p>
-                              <p>Ville : {info.city}</p>
+                              <p>{info.artist_name}</p>
+                              <p>{event_style}</p>
+                              <p>{info.date}</p>
+                              <p>{info.time}</p>
+                              <p>{info.name_place}</p>
                               <p>
-                                Adresse :{" "}
                                 {info.location ? info.location : "Inconnue"}
                               </p>
-                              <p>Lieu : {info.name_place}</p>
-                              <p>Heure : {info.time}</p>
+                              <p>
+                                {info.postal_code}
+                                {info.city}
+                              </p>
                             </div>
                             <div className="modalFooter">
                               <button
