@@ -30,7 +30,7 @@ const Home = () => {
       })
       .catch((err) => console.log(err));
   }, [searchCity]);
-
+    
   return (
     <div className="home">
       <div className="logo_container">
@@ -38,7 +38,7 @@ const Home = () => {
       </div>
       <div className={videoCard}>
         <h1 className="titleHeroHeader">
-          Tr<span>o</span>uvez v<span>o</span>tre événement idéal<span>!</span>
+          Tr<span>o</span>uvez v<span>o</span>tre événement idéal<span> !</span>
         </h1>
         <video className="background_video" autoPlay loop muted>
           <source src={home_video} type="video/mp4" />
@@ -51,7 +51,7 @@ const Home = () => {
           value={searchCity}
           onChange={(e) => setSearchCity(e.target.value)}
         />
-        {searchCity.length < 5 ? (
+        {searchCity.length < 5 || searchCity.length > 5 ? (
           ""
         ) : (
           <>
@@ -68,11 +68,13 @@ const Home = () => {
               Les évènements dans ma ville
             </a>
           </>
+
         )}
       </div>
       <div className="h2_container">
         <h2>C'est ici que tout commence!</h2>
         <p>
+
           Pour vous, artistes internationaux, artistes locaux, chargés de
           communication, gérants de bar, discothèques.. <br />
           Vous qui connaissez les difficultés de programmer un évènement sur
@@ -81,6 +83,7 @@ const Home = () => {
           <strong>Live Up est là !</strong> <br />
           Une seule et unique plateforme, pour tous, qui permet de tenir au
           courant vos fans les plus fidèles de vos évènements. <br />
+
           <strong>Simple, gratuit, efficace, Live Up !</strong>
         </p>
         <h2 id="titleCaroussel">Nos événements à venir</h2>
