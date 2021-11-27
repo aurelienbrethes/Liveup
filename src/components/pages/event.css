@@ -3,6 +3,35 @@
   flex-direction: column;
   align-items: space-around;
 }
+.heroHeaderEvent {
+  display: flex;
+  height: 100vh;
+  background: #bb5657;
+  overflow: hidden;
+}
+.titleHeroHeaderEvent {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleHeroHeaderEvent h1 {
+  font-family: "fontTitle";
+  font-size: 4em;
+}
+.imageHeroHeaderEvent {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.imageCasque {
+  width: 100%;
+  transform: rotateZ(25deg);
+}
+.imageCasque img {
+  width: 100%;
+}
 
 .modalGrid {
   display: grid;
