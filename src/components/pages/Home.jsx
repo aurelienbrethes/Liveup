@@ -54,28 +54,36 @@ const Home = () => {
         {searchCity.length < 5 || searchCity.length > 5 ? (
           ""
         ) : (
-        <>
-          <select name="city" id="selectCity">
-            {allCities.map((city, index) => {
-              return (
-                <option key={index} value={city.nom}>
-                 {city.nom}
-                </option>
-              );
-            })}
-          </select>
-          <a id="linkCity" href="/event">Les évènements dans ma ville</a>
-        </>
+          <>
+            <select name="city" id="selectCity">
+              {allCities.map((city, index) => {
+                return (
+                  <option key={index} value={city.nom}>
+                    {city.nom}
+                  </option>
+                );
+              })}
+            </select>
+            <a id="linkCity" href="/event">
+              Les évènements dans ma ville
+            </a>
+          </>
+
         )}
       </div>
       <div className="h2_container">
         <h2>C'est ici que tout commence!</h2>
         <p>
-          Pour vous, artistes internationaux, artistes locaux, chargés de communication, gérants de bar, discothèques.. <br />
-          Vous qui connaissez les difficultés de programmer un évènement sur tous les supports disponibles en ligne pour attirer la clientèle,
-          ne cherchez plus : <br />
+
+          Pour vous, artistes internationaux, artistes locaux, chargés de
+          communication, gérants de bar, discothèques.. <br />
+          Vous qui connaissez les difficultés de programmer un évènement sur
+          tous les supports disponibles en ligne pour attirer la clientèle, ne
+          cherchez plus : <br />
           <strong>Live Up est là !</strong> <br />
-          Une seule et unique plateforme, pour tous, qui permet de tenir au courant vos fans les plus fidèles de vos évènements. <br />
+          Une seule et unique plateforme, pour tous, qui permet de tenir au
+          courant vos fans les plus fidèles de vos évènements. <br />
+
           <strong>Simple, gratuit, efficace, Live Up !</strong>
         </p>
         <h2 id="titleCaroussel">Nos événements à venir</h2>
@@ -96,11 +104,18 @@ const Home = () => {
           <h4>Nadau</h4>
           <p>Bayonne</p>
           <p>
-          Nadau ou Los de Nadau est un groupe de musique gascon-béarnais créé en 1973 célébrant la culture gasconne et plus largement occitane.<br />
-          Nadau dépasse largement les frontières de sa base béarnaise et gasconne, afin de devenir le symbole même de la musique occitane et l'un des groupes emblématiques d'Occitanie. <br />
-          Les chansons De cap tà l'immortèla et L'encantada sont deux des chansons les plus célèbres de leur répertoire, <br />
-          qui ne comporte qu'une seule chanson en français: Mon Dieu que j'en suis à mon aise.<br />
-           Cette dernière chanson est également chantée en basque.
+            Nadau ou Los de Nadau est un groupe de musique gascon-béarnais créé
+            en 1973 célébrant la culture gasconne et plus largement occitane.
+            <br />
+            Nadau dépasse largement les frontières de sa base béarnaise et
+            gasconne, afin de devenir le symbole même de la musique occitane et
+            l'un des groupes emblématiques d'Occitanie. <br />
+            Les chansons De cap tà l'immortèla et L'encantada sont deux des
+            chansons les plus célèbres de leur répertoire, <br />
+            qui ne comporte qu'une seule chanson en français: Mon Dieu que j'en
+            suis à mon aise.
+            <br />
+            Cette dernière chanson est également chantée en basque.
           </p>
         </div>
       </div>
