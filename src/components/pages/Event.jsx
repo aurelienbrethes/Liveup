@@ -34,7 +34,7 @@ const Event = () => {
 
   useEffect(() => {
     axios
-      .get("https://apiliveup.herokuapp.com/events")
+      .get("https://wild-liveup.herokuapp.com/events")
       .then((res) => res.data)
       .then((data) => {
         setEvent(data);
@@ -43,7 +43,7 @@ const Event = () => {
 
   useEffect(() => {
     axios
-      .get("https://apiliveup.herokuapp.com/styles")
+      .get("https://wild-liveup.herokuapp.com/styles")
       .then((res) => res.data)
       .then((data) => {
         setStyle(data);
