@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Liveup/static/css/main.bd861823.chunk.css",
-    "main.js": "/Liveup/static/js/main.104b05fd.chunk.js",
-    "main.js.map": "/Liveup/static/js/main.104b05fd.chunk.js.map",
+    "main.js": "/Liveup/static/js/main.ea8f487d.chunk.js",
+    "main.js.map": "/Liveup/static/js/main.ea8f487d.chunk.js.map",
     "runtime-main.js": "/Liveup/static/js/runtime-main.bff51267.js",
     "runtime-main.js.map": "/Liveup/static/js/runtime-main.bff51267.js.map",
     "static/js/2.e49ea241.chunk.js": "/Liveup/static/js/2.e49ea241.chunk.js",
@@ -46,6 +46,6 @@
     "static/js/runtime-main.bff51267.js",
     "static/js/2.e49ea241.chunk.js",
     "static/css/main.bd861823.chunk.css",
-    "static/js/main.104b05fd.chunk.js"
+    "static/js/main.ea8f487d.chunk.js"
   ]
 }
