@@ -18,7 +18,7 @@ const Profil = ({ setShowLogin }) => {
 
   const handleUpdateFirstName = (param, firstname) => {
     axios
-      .put(`https://apiliveup.herokuapp.com/users/${param}`, {
+      .put(`https://wild-liveup.herokuapp.com/users/${param}`, {
         firstname,
       })
       .then((res) => {
@@ -32,7 +32,7 @@ const Profil = ({ setShowLogin }) => {
   };
   const handleUpdateLastName = (param, lastname) => {
     axios
-      .put(`https://apiliveup.herokuapp.com/users/${param}`, {
+      .put(`https://wild-liveup.herokuapp.com/users/${param}`, {
         lastname,
       })
       .then((res) => {
@@ -46,7 +46,7 @@ const Profil = ({ setShowLogin }) => {
   };
   const handleUpdateMail = (param, mail) => {
     axios
-      .put(`https://apiliveup.herokuapp.com/users/${param}`, {
+      .put(`https://wild-liveup.herokuapp.com/users/${param}`, {
         mail,
       })
       .then((res) => {
@@ -61,7 +61,7 @@ const Profil = ({ setShowLogin }) => {
   const handleUpdatePassword = (param, password) => {
     if (password === confirmPassword) {
       axios
-        .put(`https://apiliveup.herokuapp.com/users/${param}`, {
+        .put(`https://wild-liveup.herokuapp.com/users/${param}`, {
           password,
         })
         .then((res) => {

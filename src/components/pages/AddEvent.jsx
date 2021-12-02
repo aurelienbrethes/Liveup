@@ -15,13 +15,13 @@ const AddEvent = () => {
 
   useEffect(() => {
     axios
-      .get("https://apiliveup.herokuapp.com/styles")
+      .get("https://wild-liveup.herokuapp.com/styles")
       .then((res) => res.data)
       .then((data) => setStylesList(data));
   }, []);
 
   const handleAddEvents = () => {
-    axios.post("https://apiliveup.herokuapp.com/events", {
+    axios.post("https://wild-liveup.herokuapp.com/events", {
       artist_name: artistName,
       date: eventDate,
       time: eventTime,
