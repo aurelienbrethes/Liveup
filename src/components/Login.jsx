@@ -8,32 +8,30 @@ const Login = ({ setShowLogin }) => {
   const [userConnected, setUserConnected] = useState([]);
   const [dataPassword, setDataPassword] = useState("");
   const [searchUser, setSearchUser] = useState(false);
-  const [passwordError, setPasswordError]= useState(false);
+  const [passwordError, setPasswordError] = useState(false);
   const [mailNotFound, SetMailNotFound] = useState(false);
   const { setUserLogin } = useContext(UserContext);
 
   useEffect(() => {
     if (searchUser) {
       axios
-        .get(`https://apiliveup.herokuapp.com/users?mail=${dataLogin}`)
+        .get(`https://wild-liveup.herokuapp.com/users?mail=${dataLogin}`)
         .then((res) => res.data[0])
         .then((data) => {
           setUserConnected(data);
           setSearchUser(false);
         });
       if (userConnected === undefined) {
-          SetMailNotFound(true);
-      } 
-      else if (userConnected.password !== dataPassword ){
-                setPasswordError(true);
-      }
-      else {
+        SetMailNotFound(true);
+      } else if (userConnected.password !== dataPassword) {
+        setPasswordError(true);
+      } else {
         if (
           dataPassword === userConnected.password &&
           dataLogin === userConnected.mail
         ) {
           axios
-            .post("https://apiliveup.herokuapp.com/login", userConnected, {
+            .post("https://wild-liveup.herokuapp.com/login", userConnected, {
               withCredentials: true,
             })
             .then((res) => res.data)
@@ -43,12 +41,12 @@ const Login = ({ setShowLogin }) => {
             })
             .catch((err) => console.log(err));
         } else {
-            if ( dataPassword === "" && dataLogin === userConnected.mail) {
-               SetMailNotFound(true);
-            }
-            if ( dataLogin === "" && dataPassword === userConnected.password ) {
-                SetMailNotFound(true);
-            }
+          if (dataPassword === "" && dataLogin === userConnected.mail) {
+            SetMailNotFound(true);
+          }
+          if (dataLogin === "" && dataPassword === userConnected.password) {
+            SetMailNotFound(true);
+          }
         }
       }
     }
@@ -72,22 +70,21 @@ const Login = ({ setShowLogin }) => {
       <form onSubmit={handleLogin} className="loginForm">
         <label>
           <input
-            className={`inpt ${mailNotFound && 'redBorder'}`}
+            className={`inpt ${mailNotFound && "redBorder"}`}
             onChange={(e) => setDataLogin(e.target.value)}
             type="email"
             placeholder="Entrez votre mail..."
-          ></input> 
+          ></input>
           {mailNotFound && <p>Email incorrect</p>}
         </label>
         <label>
           <input
-            className={`inpt ${passwordError && 'redBorder'}`}
+            className={`inpt ${passwordError && "redBorder"}`}
             onChange={(e) => setDataPassword(e.target.value)}
             type="password"
             placeholder="Entrez votre mot de passe..."
           ></input>
           {passwordError && <p>Mot de passe incorrect !!</p>}
-
         </label>
         <button className="btn" type="submit">
           {" "}
