@@ -36,8 +36,10 @@ const Login = ({ setShowLogin }) => {
             })
             .then((res) => res.data)
             .then((data) => {
-              setUserLogin(data);
-              setShowLogin("");
+              if (data) {
+                setShowLogin("");
+                setUserLogin(data);
+              }
             })
             .catch((err) => console.log(err));
         } else {

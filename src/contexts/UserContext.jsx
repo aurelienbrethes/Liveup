@@ -10,7 +10,8 @@ export const UserContextProvider = ({ children }) => {
   useEffect(() => {
     axios
       .get("https://wild-liveup.herokuapp.com/login", { withCredentials: true })
-      .then((res) => console.log(res));
+      .then((res) => res.data)
+      .then((data) => setUserLogin(data));
   }, []);
 
   return (
