@@ -38,7 +38,7 @@ const Login = ({ setShowLogin }) => {
             .then((data) => {
               if (data) {
                 setShowLogin("");
-                console.log(data);
+                setUserLogin(data);
               }
             })
             .catch((err) => console.log(err));
