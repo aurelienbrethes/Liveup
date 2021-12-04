@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Liveup/static/css/main.bd861823.chunk.css",
-    "main.js": "/Liveup/static/js/main.ea8f487d.chunk.js",
-    "main.js.map": "/Liveup/static/js/main.ea8f487d.chunk.js.map",
+    "main.css": "/Liveup/static/css/main.6d6112b2.chunk.css",
+    "main.js": "/Liveup/static/js/main.925c713c.chunk.js",
+    "main.js.map": "/Liveup/static/js/main.925c713c.chunk.js.map",
     "runtime-main.js": "/Liveup/static/js/runtime-main.bff51267.js",
     "runtime-main.js.map": "/Liveup/static/js/runtime-main.bff51267.js.map",
-    "static/js/2.e49ea241.chunk.js": "/Liveup/static/js/2.e49ea241.chunk.js",
-    "static/js/2.e49ea241.chunk.js.map": "/Liveup/static/js/2.e49ea241.chunk.js.map",
+    "static/js/2.bd87e8e1.chunk.js": "/Liveup/static/js/2.bd87e8e1.chunk.js",
+    "static/js/2.bd87e8e1.chunk.js.map": "/Liveup/static/js/2.bd87e8e1.chunk.js.map",
     "static/js/3.049c6c8f.chunk.js": "/Liveup/static/js/3.049c6c8f.chunk.js",
     "static/js/3.049c6c8f.chunk.js.map": "/Liveup/static/js/3.049c6c8f.chunk.js.map",
     "index.html": "/Liveup/index.html",
-    "static/css/main.bd861823.chunk.css.map": "/Liveup/static/css/main.bd861823.chunk.css.map",
-    "static/js/2.e49ea241.chunk.js.LICENSE.txt": "/Liveup/static/js/2.e49ea241.chunk.js.LICENSE.txt",
+    "static/css/main.6d6112b2.chunk.css.map": "/Liveup/static/css/main.6d6112b2.chunk.css.map",
+    "static/js/2.bd87e8e1.chunk.js.LICENSE.txt": "/Liveup/static/js/2.bd87e8e1.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/Liveup/static/media/BebasNeue-Regular.9aa03f9d.ttf",
     "static/media/Live_up_1.5754c924.gif": "/Liveup/static/media/Live_up_1.5754c924.gif",
     "static/media/Live_up_1.ad3cdde0.jpg": "/Liveup/static/media/Live_up_1.ad3cdde0.jpg",
     "static/media/autres.a9ba1381.png": "/Liveup/static/media/autres.a9ba1381.png",
     "static/media/blues.89931a07.jpg": "/Liveup/static/media/blues.89931a07.jpg",
-    "static/media/casque.32a3006f.svg": "/Liveup/static/media/casque.32a3006f.svg",
+    "static/media/casque.7d7e8664.svg": "/Liveup/static/media/casque.7d7e8664.svg",
     "static/media/country.ba0c3fde.jpg": "/Liveup/static/media/country.ba0c3fde.jpg",
     "static/media/electro.71433d1a.jpg": "/Liveup/static/media/electro.71433d1a.jpg",
     "static/media/folk.e310dea0.jpg": "/Liveup/static/media/folk.e310dea0.jpg",
@@ -44,8 +44,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bff51267.js",
-    "static/js/2.e49ea241.chunk.js",
-    "static/css/main.bd861823.chunk.css",
-    "static/js/main.ea8f487d.chunk.js"
+    "static/js/2.bd87e8e1.chunk.js",
+    "static/css/main.6d6112b2.chunk.css",
+    "static/js/main.925c713c.chunk.js"
   ]
 }
