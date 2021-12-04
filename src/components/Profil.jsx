@@ -77,6 +77,19 @@ const Profil = ({ setShowLogin }) => {
     }
   };
 
+  const handleLogOut = () => {
+    axios
+      .delete("https://wild-liveup.herokuapp.com/logout", {
+        withCredentials: true,
+      })
+      .then(() => {
+        setShowLogin("");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="profil">
       <h2 className="titleProfil">Mes informations</h2>
@@ -162,13 +175,7 @@ const Profil = ({ setShowLogin }) => {
           Modifier Mot de Passe
         </button>
       </div>
-      <div
-        className="contImageLogout"
-        onClick={() => {
-          setUserLogin([]);
-          setShowLogin("");
-        }}
-      >
+      <div className="contImageLogout" onClick={handleLogOut}>
         <img src={logout} alt="logout" />
       </div>
     </div>
