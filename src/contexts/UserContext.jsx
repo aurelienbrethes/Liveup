@@ -7,7 +7,6 @@ export default UserContext;
 
 export const UserContextProvider = ({ children }) => {
   const [userLogin, setUserLogin] = useState([]);
-  console.log(userLogin);
   useEffect(() => {
     axios
       .get("https://wild-liveup.herokuapp.com/login", { withCredentials: true })
